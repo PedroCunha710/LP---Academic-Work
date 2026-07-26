@@ -1,9 +1,9 @@
-/* 
+/*
  * File:   menuBooking.h
  * Author: Henrique Lopes
  *
  * Created on 20 de dezembro de 2024, 13:54
- * 
+ *
  * @brief In this header file we will declare the functions of the reservations to use in other pages.
  * This file contains the functions of the reservations to use in other pages.
  */
@@ -14,7 +14,7 @@
 
 #include "menuEquipment.h"
 #include "menuSpace.h"
-#include "menuClient.h"    
+#include "menuClient.h"
 #include "input.h"
 
 // Defines
@@ -27,6 +27,11 @@
  * Minimun reservations available.
  */
 #define MIN_RESERVATIONS 1
+
+/** @def MAX_EQUIPMENT_PER_RESERVATION
+ * Maximum number of different equipment types that can be attached to a single reservation.
+ */
+#define MAX_EQUIPMENT_PER_RESERVATION 5
 
 /** @def MSG_RESERVATION_ID
  * Message to enter reservation ID.
@@ -43,15 +48,20 @@
  */
 #define STATUS_CONFIRMED 2
 
+/** @def STATUS_FINALIZED
+ * Finalized book status (the event already took place).
+ */
+#define STATUS_FINALIZED 3
+
 /** @def STATUS_CANCELED
  * Canceled book status.
  */
-#define STATUS_CANCELED 3
+#define STATUS_CANCELED 4
 
 /** @def MSG_RESERVATION_STATUS
  * Message to enter reservation status.
  */
-#define MSG_RESERVATION_STATUS "Enter the reservation status (1.Pending, 2.Confirmed, 3.Canceled): "
+#define MSG_RESERVATION_STATUS "Enter the reservation status (1.Pending, 2.Confirmed, 3.Finalized, 4.Canceled): "
 
 
 
@@ -60,15 +70,23 @@ typedef struct {
     int day, month, year, hour, minute;
 } DateTime;
 
+/**
+ * @brief One line item of equipment (type + quantity) attached to a reservation.
+ */
+typedef struct {
+    int equipment_id;
+    int quantity;
+} ReservationEquipmentItem;
+
 typedef struct {
     int reservation_id;
     int client_id;
     int space_id;
-    int equipment_id;
-    int equipment_count;
+    ReservationEquipmentItem equipmentItems[MAX_EQUIPMENT_PER_RESERVATION]; // Equipment reserved: type (id) + quantity
+    int equipmentItemCount;
     DateTime date;
     int duration_hours; // Duration of the reservation in hours
-    int status;         // Status of the reservation (pending, confirmed, canceled)
+    int status;         // Status of the reservation (pending, confirmed, finalized, canceled)
     int participants;   // Number of participants
 } Reservation;
 
@@ -77,13 +95,14 @@ typedef struct {
     Reservation *reservations; // Dynamic list of reservations
     int total;                 // Total number of reservations
     int capacity;              // Current capacity of the list
+    int nextId;                // Next sequential, unique id to assign. Never reused, even after deletions.
 } ReservationList;
 
 // CRUD Functions
 
 /**
  * @brief This function create the reservations.
- * @param ReservationList,ClientList,geralSpaces,equipmentManager are used to send the adress of the mains variables "reservations","clients",spaces","equipments 
+ * @param ReservationList,ClientList,geralSpaces,equipmentManager are used to send the adress of the mains variables "reservations","clients",spaces","equipments
  * to the following functions.
  * @return This function does not return any value. Just create the reservations.
  */
@@ -120,20 +139,19 @@ void listReservations(ReservationList *reservations);
 int searchReservation(ReservationList *reservations, int reservation_id);
 
 /**
- * @brief This function update the reservations.
- * @param ReservationList are used to send the adress of the mains variables "reservations" to the following functions.
- * @param reservation_id to found the reservation to update
+ * @brief This function update the reservations. If the new status is Canceled, the associated
+ * space and equipment are released through cancelReservation().
+ * @param ReservationList,geralSpaces,equipmentManager are used to send the adress of the mains variables "reservations","spaces","equipments" to the following functions.
  * @return This function does not return any value. Just update the reservations.
  */
-void updateReservation(ReservationList *reservations, int reservation_id);
+void updateReservation(ReservationList *reservations, geralSpaces *spaces, equipmentManager *equipments);
 
 /**
  * @brief This function delete the reservations.
  * @param ReservationList,geralSpaces,equipmentManager are used to send the adress of the mains variables "reservations","spaces","equipments" to the following functions.
- * @param reservation_id to found the reservation to delete.
  * @return This function does not return any value. Just delete the reservations.
  */
-void deleteReservation(ReservationList *reservations,geralSpaces *spaces,equipmentManager *equipments, int reservation_id);
+void deleteReservation(ReservationList *reservations,geralSpaces *spaces,equipmentManager *equipments);
 
 // Reports
 
@@ -145,11 +163,11 @@ void deleteReservation(ReservationList *reservations,geralSpaces *spaces,equipme
 void totalReservations(ReservationList *reservations);
 
 /**
- * @brief This function show the reservations by status.
+ * @brief This function show the reservations matching a given date entered by the user.
  * @param ReservationList are used to send the adress of the mains variables "reservations" to the following functions.
- * @return This function does not return any value. Just show the reservations by status.
+ * @return This function does not return any value. Just show the reservations for the chosen date.
  */
-void listreservationsByStatus(ReservationList *reservations);
+void reservationsByDate(ReservationList *reservations);
 
 /**
  * @brief This function show the most participants reservations.
@@ -190,9 +208,9 @@ void loadReservations(ReservationList *reservations);
 
 //secondary functions
 /**
- * @brief This function do the reservations by status.
+ * @brief This function shows the reservations grouped/counted by status.
  * @param ReservationList are used to send the adress of the mains variables "reservations" to the following functions.
- * @return This function does not return any value. Just do the reservations by status.
+ * @return This function does not return any value. Just show the reservations by status.
  */
 void reservationsByStatus(ReservationList *reservations);
 
@@ -233,11 +251,73 @@ void mostSpaceReservated(geralSpaces *spaces,ReservationList *reservations);
 void leastSpaceReservated(geralSpaces *spaces,ReservationList *reservations);
 
 /**
+ * @brief This function shows, for each space, the percentage of all reservations made for it.
+ * @param geralSpaces, ReservationList are used to send the adress of the mains variables "spaces",reservations" to the following functions.
+ * @return This function does not return any value. Just show the occupancy rate of each space.
+ */
+void spaceOccupancyRate(geralSpaces *spaces, ReservationList *reservations);
+
+/**
+ * @brief This function shows, for each client, the total reservations made and the spaces used.
+ * @param ClientList, ReservationList, geralSpaces are used to send the adress of the mains variables "clients","reservations","spaces" to the following functions.
+ * @return This function does not return any value. Just show the reservation details per client.
+ */
+void clientReservationDetails(ClientList *clients, ReservationList *reservations, geralSpaces *spaces);
+
+/**
  * @brief This function cancel the reservation.
  * @param ReservationList,geralSpaces,equipmentManager are used to send the adress of the mains variables "reservations","spaces","equipments to the following functions.
  * @param reservation_id is used to find the reservation to cancel
  * @return This function does not return any value. Just cancel the reservation for the id.
  */
 void cancelReservation(ReservationList *reservations, geralSpaces *spaces,equipmentManager *equipments, int reservation_id);
+
+/**
+ * @brief This function deletes a space. If the space has reservations pointing to it, it is marked
+ * Inactive instead of being physically removed, to preserve referential integrity.
+ * @param geralSpaces, ReservationList are used to send the adress of the mains variables "spaces","reservations" to the following functions.
+ * @return This function does not return any value.
+ */
+void deleteSpace(geralSpaces *spaces, ReservationList *reservations);
+
+/**
+ * @brief This function deletes a client. If the client has reservations pointing to it, it is marked
+ * Inactive instead of being physically removed, to preserve referential integrity.
+ * @param ClientList, ReservationList are used to send the adress of the mains variables "list","reservations" to the following functions.
+ * @return This function does not return any value.
+ */
+void removeClient(ClientList *list, ReservationList *reservations);
+
+/**
+ * @brief This function deletes an equipment. If the equipment has reservations pointing to it, it is
+ * marked Inactive instead of being physically removed, to preserve referential integrity.
+ * @param equipmentManager, ReservationList are used to send the adress of the mains variables "equipments","reservations" to the following functions.
+ * @return This function does not return any value.
+ */
+void deleteEquipment(equipmentManager *equipments, ReservationList *reservations);
+
+/**
+ * @brief Checks whether any reservation references the given space.
+ * @param ReservationList are used to send the adress of the mains variables "reservations" to the following functions.
+ * @param space_id the space id to check.
+ * @return 1 if at least one reservation references the space, 0 otherwise.
+ */
+int spaceHasReservations(ReservationList *reservations, int space_id);
+
+/**
+ * @brief Checks whether any reservation references the given client.
+ * @param ReservationList are used to send the adress of the mains variables "reservations" to the following functions.
+ * @param client_id the client id to check.
+ * @return 1 if at least one reservation references the client, 0 otherwise.
+ */
+int clientHasReservations(ReservationList *reservations, int client_id);
+
+/**
+ * @brief Checks whether any reservation references the given equipment.
+ * @param ReservationList are used to send the adress of the mains variables "reservations" to the following functions.
+ * @param equipment_id the equipment id to check.
+ * @return 1 if at least one reservation references the equipment, 0 otherwise.
+ */
+int equipmentHasReservations(ReservationList *reservations, int equipment_id);
 
 #endif/* MENUBOOKING_H */

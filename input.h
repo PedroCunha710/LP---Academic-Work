@@ -19,6 +19,34 @@
 #define INVALID_VALUE "THE VALUE ENTERED IS INVALID!"
 
 /**
+ * @def LOG_FILE
+ * Name of the file where audit/error logs are appended.
+ */
+#define LOG_FILE "system.log"
+
+/**
+ * @brief Severity level of a log entry.
+ */
+typedef enum {
+    LOG_INFO,
+    LOG_WARNING,
+    LOG_ERROR
+} LogLevel;
+
+/**
+ * @brief Appends a timestamped entry to the system log file.
+ *
+ * Used across all modules to register critical actions (create/update/delete/
+ * save/load) and errors, for later debugging and auditing, as required by the
+ * project specification.
+ *
+ * @param level The severity of the entry (LOG_INFO, LOG_WARNING, LOG_ERROR).
+ * @param module The name of the module/entity generating the entry (e.g. "SPACE").
+ * @param message A short human-readable description of the event.
+ */
+void logMessage(LogLevel level, const char *module, const char *message);
+
+/**
  * @brief Clears the input buffer to remove any leftover characters.
  * 
  * This function is used to flush the input buffer, clearing any extraneous characters or newline characters 

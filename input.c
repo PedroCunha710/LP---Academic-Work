@@ -19,20 +19,44 @@ void cleanBuffer() {
     while ((clean = getchar()) != '\n' && clean != EOF);
 }
 
+static const char *levelToString(LogLevel level) {
+    switch (level) {
+        case LOG_INFO: return "INFO";
+        case LOG_WARNING: return "WARNING";
+        case LOG_ERROR: return "ERROR";
+        default: return "UNKNOWN";
+    }
+}
+
+void logMessage(LogLevel level, const char *module, const char *message) {
+    FILE *fp = fopen(LOG_FILE, "a");
+    if (!fp) {
+        return; // Logging must never crash the application.
+    }
+
+    time_t now = time(NULL);
+    struct tm *info = localtime(&now);
+    char timestamp[20];
+    strftime(timestamp, sizeof(timestamp), "%Y-%m-%d %H:%M:%S", info);
+
+    fprintf(fp, "[%s] [%s] [%s] %s\n", timestamp, levelToString(level), module, message);
+    fclose(fp);
+}
+
 int verify(int minVal, int maxVal, char *mensage) {
     int val;
-    printf(mensage);
+    printf("%s", mensage);
     while (scanf("%d", &val) != 1 || val < minVal || val > maxVal) {
         puts(INVALID_VALUE);
         cleanBuffer();
-        printf(mensage);
+        printf("%s", mensage);
     }
     return val;
 }
 
 
 void readStrg(char* strg, unsigned int sz, char *mensage) {
-    printf(mensage);
+    printf("%s", mensage);
     if (fgets(strg, sz, stdin) != NULL) {
         unsigned int len = strlen(strg);
         if (len > 0 && strg[len - 1] == '\n') {

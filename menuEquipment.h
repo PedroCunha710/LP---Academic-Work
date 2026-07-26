@@ -122,11 +122,13 @@ typedef struct {
     int usingEquipment;
     equipmentType type;
     equipmentStatus status;
+    int isActive; // 1 = active (shown in regular listings), 0 = inactive (kept for referential integrity)
 }Equipment;
 
 typedef struct{
     int counter;
     int capacity;
+    int nextId; // Next sequential, unique id to assign. Never reused, even after deletions.
     Equipment *equipmentList;
 }equipmentManager;
 
@@ -176,11 +178,18 @@ void loadEquipment(equipmentManager *equipments); //LOAD EQUIPMENT (FILE equipme
 void createEquipment(equipmentManager *equipments); //FUNCTION TO CREATE EQUIPMENT
 
 /**
- * @brief This function list the equipments.
+ * @brief This function list the active equipments.
  * @param equipmentManager are used to send the adress of the mains variables "equipments" to the following functions.
- * @return This function does not return any value. Just list the equipments.
+ * @return This function does not return any value. Just list the equipments. Inactive equipment is hidden.
  */
 void listEquipment(equipmentManager *equipments); //FUNCTION TO SEARCH/LIST EQUIPMENT
+
+/**
+ * @brief This function lists the inactive (soft-deleted) equipment, so it can be reactivated if needed.
+ * @param equipmentManager are used to send the adress of the mains variables "equipments" to the following functions.
+ * @return This function does not return any value. Just list the inactive equipment.
+ */
+void listInactiveEquipment(equipmentManager *equipments);
 
 /**
  * @brief This function update the equipments.
@@ -190,17 +199,17 @@ void listEquipment(equipmentManager *equipments); //FUNCTION TO SEARCH/LIST EQUI
 void updateEquipment(equipmentManager *equipments); //FUNCTION TO UPDATE EQUIPMENT
 
 /**
- * @brief This function delete the equipments.
+ * @brief This function reactivates an equipment previously marked as inactive.
  * @param equipmentManager are used to send the adress of the mains variables "equipments" to the following functions.
- * @return This function does not return any value. Just delete the equipments.
+ * @return This function does not return any value. Just reactivate the equipment.
  */
-void deleteEquipment(equipmentManager *equipments); //FUNCTION TO DELETE EQUIPMENT
+void reactivateEquipment(equipmentManager *equipments);
 
 /**
- * @brief This function find the equipments.
+ * @brief This function find the equipments (searches both active and inactive equipment).
  * @param equipmentManager are used to send the adress of the mains variables "equipments" to the following functions.
  * @param id is used to find the id of the equipment
- * @return This function return the id of equipment if id is found or 0 if the id is not found. 
+ * @return This function returns the index of the equipment if found, or -1 if the id is not found.
  */
 int findEquipment(equipmentManager *equipments, int id);
 

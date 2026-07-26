@@ -1,9 +1,9 @@
-/* 
+/*
  * File:   menuSpace.h
- * Author: Pedro Cunha 
+ * Author: Pedro Cunha
  *
  * Created on 20 de dezembro de 2024, 13:51
- * 
+ *
  * @brief In this header file we will declare the functions of the spaces to use in other pages.
  * This file contains the functions of the spaces to use in other pages.
  */
@@ -103,8 +103,8 @@
 #define UPDATE_SPACE "SPACE UPDATED SUCESSFULLY"
 
 typedef enum{
-    AUDITORIUM, 
-    MEETING_ROOM, 
+    AUDITORIUM,
+    MEETING_ROOM,
     EXTERNAL_SPACE,
     PARTY_ROOM,
     CONFERENCE_ROOM,
@@ -119,12 +119,14 @@ typedef struct{
     int spaceOccupied;
     spaceType type;
     int reservations;
-    
+    int isActive; // 1 = active (shown in regular listings), 0 = inactive (kept for referential integrity)
+
 } Space;
 
 typedef struct{
     int counter;
     int capacity;
+    int nextId; // Next sequential, unique id to assign. Never reused, even after deletions.
     Space *spaceList;
 }geralSpaces;
 
@@ -184,11 +186,18 @@ int spaceOccupied(geralSpaces *spaces, int space_id);
 void createSpace(geralSpaces *spaces);
 
 /**
- * @brief This function list the spaces.
+ * @brief This function list the active spaces.
  * @param geralSpaces are used to send the adress of the mains variables "spaces" to the following functions.
- * @return This function does not return any value. Just list the spaces.
+ * @return This function does not return any value. Just list the spaces. Inactive spaces are hidden.
  */
 void listSpace(geralSpaces *spaces);
+
+/**
+ * @brief This function lists the inactive (soft-deleted) spaces, so they can be reactivated if needed.
+ * @param geralSpaces are used to send the adress of the mains variables "spaces" to the following functions.
+ * @return This function does not return any value. Just list the inactive spaces.
+ */
+void listInactiveSpaces(geralSpaces *spaces);
 
 /**
  * @brief This function update the spaces.
@@ -198,11 +207,11 @@ void listSpace(geralSpaces *spaces);
 void updateSpace(geralSpaces *spaces);
 
 /**
- * @brief This function delete the spaces.
+ * @brief This function reactivates a space previously marked as inactive.
  * @param geralSpaces are used to send the adress of the mains variables "spaces" to the following functions.
- * @return This function does not return any value. Just delete the spaces.
+ * @return This function does not return any value. Just reactivate the space.
  */
-void deleteSpace(geralSpaces *spaces);
+void reactivateSpace(geralSpaces *spaces);
 
 //PROTOTIPS REPORTS FUCTIONS
 /**

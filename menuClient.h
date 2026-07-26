@@ -1,10 +1,10 @@
 
-/* 
+/*
  * File:   menuClient.h
  * Author: Henrique Lopes
  *
  * Created on 20 de dezembro de 2024, 13:52
- * 
+ *
  * @brief In this header file we will declare the functions of the clients to use in other pages.
  * This file contains the functions of the clients to use in other pages.
  */
@@ -71,12 +71,14 @@ typedef struct {
     struct {
         int day, month, year;
     } registration_date;
+    int isActive; // 1 = active (shown in regular listings), 0 = inactive (kept for referential integrity)
 } Client;
 
 typedef struct {
     Client *clients;
     int capacity;
     int total;
+    int nextId; // Next sequential, unique id to assign. Never reused, even after deletions.
 } ClientList;
 
 
@@ -136,19 +138,34 @@ void freeClientList(ClientList *list);
 void createClient(ClientList *list);
 
 /**
- * @brief This function list the clients.
+ * @brief This function list the active clients.
  * @param ClientList are used to send the adress of the mains variables "list" to the following functions.
- * @return This function does not return any value. Just list the clients.
+ * @return This function does not return any value. Just list the clients. Inactive clients are hidden.
  */
 void listClients(ClientList *list);
+
+/**
+ * @brief This function lists the inactive (soft-deleted) clients, so they can be reactivated if needed.
+ * @param ClientList are used to send the adress of the mains variables "list" to the following functions.
+ * @return This function does not return any value. Just list the inactive clients.
+ */
+void listInactiveClients(ClientList *list);
 
 /**
  * @brief This function find the clients.
  * @param ClientList are used to send the adress of the mains variables "list" to the following functions.
  * @param id is used to find the id of the client.
- * @return This function does return 1 if client is found or -1 if client is not found.
+ * @return This function does return the index of the client if found or -1 if client is not found.
  */
 int findClient(ClientList *list, int id);
+
+/**
+ * @brief This function checks if a NIF is already registered by an active client.
+ * @param ClientList are used to send the adress of the mains variables "list" to the following functions.
+ * @param nif is the fiscal number to check.
+ * @return This function returns 1 if the NIF is already registered, or 0 otherwise.
+ */
+int nifExists(ClientList *list, int nif);
 
 /**
  * @brief This function update the clients.
@@ -158,11 +175,11 @@ int findClient(ClientList *list, int id);
 void updateClient(ClientList *list);
 
 /**
- * @brief This function delete the clients.
+ * @brief This function reactivates a client previously marked as inactive.
  * @param ClientList are used to send the adress of the mains variables "list" to the following functions.
- * @return This function does not return any value. Just delete the clients.
+ * @return This function does not return any value. Just reactivate the client.
  */
-void removeClient(ClientList *list);
+void reactivateClient(ClientList *list);
 
 // Reports
 /**
