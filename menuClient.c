@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <limits.h>
 #include "menuClient.h"
 #include "menuBooking.h"
 #include "input.h"
@@ -414,7 +415,7 @@ void leastReservationsClient(ClientList *clients, ReservationList *reservations)
         return;
     }
 
-    int minReservations = __INT_MAX__;
+    int minReservations = INT_MAX;
     Client *leastReserved = NULL;
 
     for (int i = 0; i < clients->total; i++) {

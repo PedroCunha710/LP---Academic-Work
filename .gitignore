@@ -5,6 +5,11 @@ dist/
 *.o.d
 *.exe
 
+# Build artifacts (MSVC / VS Code cl.exe task, used only for local test-compiles)
+*.obj
+*.pdb
+*.ilk
+
 # NetBeans private project data (machine-specific)
 nbproject/private/
 

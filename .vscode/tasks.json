@@ -1,0 +1,34 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: cl.exe build active file",
+            "command": "cl.exe",
+            "args": [
+                "/Zi",
+                "/EHsc",
+                "/nologo",
+                "/Fe${workspaceFolder}\\main.exe",
+                "${workspaceFolder}\\main.c",
+                "${workspaceFolder}\\input.c",
+                "${workspaceFolder}\\menus.c",
+                "${workspaceFolder}\\menuSpace.c",
+                "${workspaceFolder}\\menuClient.c",
+                "${workspaceFolder}\\menuEquipment.c",
+                "${workspaceFolder}\\menuBooking.c"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Builds the whole project (all .c files), not just the active file."
+        }
+    ],
+    "version": "2.0.0"
+}

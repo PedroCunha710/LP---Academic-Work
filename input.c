@@ -46,7 +46,14 @@ void logMessage(LogLevel level, const char *module, const char *message) {
 int verify(int minVal, int maxVal, char *mensage) {
     int val;
     printf("%s", mensage);
-    while (scanf("%d", &val) != 1 || val < minVal || val > maxVal) {
+    int result;
+    while ((result = scanf("%d", &val)) != 1 || val < minVal || val > maxVal) {
+        if (result == EOF) {
+            // Input stream closed: there is no valid value to recover, so stop instead of spinning forever.
+            logMessage(LOG_ERROR, "INPUT", "Input stream closed (EOF) while waiting for a value.");
+            fprintf(stderr, "\nINPUT STREAM CLOSED. EXITING.\n");
+            exit(EXIT_FAILURE);
+        }
         puts(INVALID_VALUE);
         cleanBuffer();
         printf("%s", mensage);
