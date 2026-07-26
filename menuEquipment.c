@@ -364,6 +364,25 @@ void reactivateEquipment(equipmentManager *equipments){
     logMessage(LOG_INFO, "EQUIPMENT", "Equipment reactivated.");
 }
 
+//FUNCTION TO MANUALLY DEACTIVATE AN EQUIPMENT (WITHOUT DELETING IT)
+void deactivateEquipment(equipmentManager *equipments){
+    int index = findEquipment(equipments, verify(1, 100000, "ID OF THE EQUIPMENT YOU WANT TO DEACTIVATE: "));
+
+    if (index == -1){
+        puts(ID_NOT_FOUND);
+        return;
+    }
+
+    if (!equipments->equipmentList[index].isActive){
+        puts("THIS EQUIPMENT IS ALREADY INACTIVE!");
+        return;
+    }
+
+    equipments->equipmentList[index].isActive = 0;
+    puts("EQUIPMENT DEACTIVATED SUCCESSFULLY!");
+    logMessage(LOG_INFO, "EQUIPMENT", "Equipment manually deactivated.");
+}
+
 
 //REPORT EQUIPMENTS FUNCTIONS
 void mostUsedEquipment(equipmentManager *equipments){

@@ -336,6 +336,26 @@ void reactivateClient(ClientList *list) {
     logMessage(LOG_INFO, "CLIENT", "Client reactivated.");
 }
 
+// Manually deactivates a client (marks it Inactive) without deleting it
+void deactivateClient(ClientList *list) {
+    int id = verify(1, 100000, MSG_GET_CLIENT_ID);
+
+    int index = findClient(list, id);
+    if (index == -1) {
+        puts("Client not found!");
+        return;
+    }
+
+    if (!list->clients[index].isActive) {
+        puts("THIS CLIENT IS ALREADY INACTIVE!");
+        return;
+    }
+
+    list->clients[index].isActive = 0;
+    puts("CLIENT DEACTIVATED SUCCESSFULLY!");
+    logMessage(LOG_INFO, "CLIENT", "Client manually deactivated.");
+}
+
 // Reports
 void totalClientsReport(ClientList *list) {
     printf("Total registered clients: %d\n", list->total);

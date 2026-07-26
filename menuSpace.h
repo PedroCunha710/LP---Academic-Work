@@ -213,6 +213,14 @@ void updateSpace(geralSpaces *spaces);
  */
 void reactivateSpace(geralSpaces *spaces);
 
+/**
+ * @brief This function manually deactivates a space (marks it Inactive) without deleting it,
+ * regardless of whether it has reservations. Useful to temporarily take a space out of service.
+ * @param geralSpaces are used to send the adress of the mains variables "spaces" to the following functions.
+ * @return This function does not return any value. Just deactivate the space.
+ */
+void deactivateSpace(geralSpaces *spaces);
+
 //PROTOTIPS REPORTS FUCTIONS
 /**
  * @brief This function show the total avaliable spaces.

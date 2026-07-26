@@ -342,6 +342,30 @@ void reactivateSpace(geralSpaces *spaces){
     puts(ID_NOT_FOUND);
 }
 
+//FUNCTION TO MANUALLY DEACTIVATE A SPACE (WITHOUT DELETING IT)
+void deactivateSpace(geralSpaces *spaces){
+    if (spaces->counter == 0){
+        puts("NO SPACES REGISTERED!");
+        return;
+    }
+
+    int id = verify(1, 100000, "ID OF THE SPACE YOU WANT TO DEACTIVATE: ");
+
+    for (int i = 0; i < spaces->counter; i++){
+        if (spaces->spaceList[i].id == id){
+            if (!spaces->spaceList[i].isActive){
+                puts("THIS SPACE IS ALREADY INACTIVE!");
+                return;
+            }
+            spaces->spaceList[i].isActive = 0;
+            puts("SPACE DEACTIVATED SUCCESSFULLY!");
+            logMessage(LOG_INFO, "SPACE", "Space manually deactivated.");
+            return;
+        }
+    }
+    puts(ID_NOT_FOUND);
+}
+
 
 //REPORTS FUNCTIONS
 

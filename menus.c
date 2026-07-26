@@ -32,12 +32,13 @@ void menuSpace(geralSpaces *spaces,ReservationList *reservations){
         puts("[2] LIST SPACES");
         puts("[3] UPDATE SPACES");
         puts("[4] DELETE SPACES");
-        puts("[5] REACTIVATE SPACE");
-        puts("[6] LIST INACTIVE SPACES");
-        puts("[7] NEXT PAGE (REPORTS)");
-        puts("[8] RETURN TO MAIN MENU");
+        puts("[5] DEACTIVATE SPACE");
+        puts("[6] REACTIVATE SPACE");
+        puts("[7] LIST INACTIVE SPACES");
+        puts("[8] NEXT PAGE (REPORTS)");
+        puts("[9] RETURN TO MAIN MENU");
 
-        option=verify(1,8,"OPTION:");
+        option=verify(1,9,"OPTION:");
 
 
         switch(option){
@@ -54,15 +55,18 @@ void menuSpace(geralSpaces *spaces,ReservationList *reservations){
                 deleteSpace(spaces, reservations);
                 break;
             case 5:
-                reactivateSpace(spaces);
+                deactivateSpace(spaces);
                 break;
             case 6:
-                listInactiveSpaces(spaces);
+                reactivateSpace(spaces);
                 break;
             case 7:
-                menuSpace2(spaces,reservations);
+                listInactiveSpaces(spaces);
                 break;
             case 8:
+                menuSpace2(spaces,reservations);
+                break;
+            case 9:
                 saveSpace(spaces);
             puts("RETURN TO MAIN MENU...");
             return;
@@ -71,7 +75,7 @@ void menuSpace(geralSpaces *spaces,ReservationList *reservations){
                 puts("INVALID OPTION!! TRY AGAIN!");
             }
 
-        }while(option!=8);
+        }while(option!=9);
 
 }
 
@@ -142,12 +146,13 @@ void menuEquipment(equipmentManager *equipments, ReservationList *reservations){
         puts("[2] LIST EQUIPMENT");
         puts("[3] UPDATE EQUIPMENT");
         puts("[4] DELETE EQUIPMENT");
-        puts("[5] REACTIVATE EQUIPMENT");
-        puts("[6] LIST INACTIVE EQUIPMENT");
-        puts("[7] NEXT PAGE (REPORTS)");
-        puts("[8] RETURN TO MAIN MENU");
+        puts("[5] DEACTIVATE EQUIPMENT");
+        puts("[6] REACTIVATE EQUIPMENT");
+        puts("[7] LIST INACTIVE EQUIPMENT");
+        puts("[8] NEXT PAGE (REPORTS)");
+        puts("[9] RETURN TO MAIN MENU");
 
-        option=verify(1,8,"OPTION:");
+        option=verify(1,9,"OPTION:");
 
 
         switch(option){
@@ -164,15 +169,18 @@ void menuEquipment(equipmentManager *equipments, ReservationList *reservations){
                 deleteEquipment(equipments, reservations);
                 break;
             case 5:
-                reactivateEquipment(equipments);
+                deactivateEquipment(equipments);
                 break;
             case 6:
-                listInactiveEquipment(equipments);
+                reactivateEquipment(equipments);
                 break;
             case 7:
-                menuEquipment2(equipments);
+                listInactiveEquipment(equipments);
                 break;
             case 8:
+                menuEquipment2(equipments);
+                break;
+            case 9:
                 saveEquipment(equipments);
             puts("RETURN TO MAIN MENU...");
             return;
@@ -181,7 +189,7 @@ void menuEquipment(equipmentManager *equipments, ReservationList *reservations){
                 puts("INVALID OPTION! TRY AGAIN!!");
             }
 
-        }while(option!=8);
+        }while(option!=9);
 
 
 }
@@ -249,12 +257,13 @@ void menuClient(ClientList *clients,ReservationList *reservations, geralSpaces *
         puts("[2] LIST CLIENT");
         puts("[3] UPDATE CLIENT");
         puts("[4] DELETE CLIENT");
-        puts("[5] REACTIVATE CLIENT");
-        puts("[6] LIST INACTIVE CLIENTS");
-        puts("[7] NEXT PAGE (REPORTS)");
-        puts("[8] RETURN TO MAIN MENU");
+        puts("[5] DEACTIVATE CLIENT");
+        puts("[6] REACTIVATE CLIENT");
+        puts("[7] LIST INACTIVE CLIENTS");
+        puts("[8] NEXT PAGE (REPORTS)");
+        puts("[9] RETURN TO MAIN MENU");
 
-        option = verify(1, 8, "OPTION:");
+        option = verify(1, 9, "OPTION:");
 
         switch (option) {
             case 1:
@@ -270,22 +279,25 @@ void menuClient(ClientList *clients,ReservationList *reservations, geralSpaces *
                 removeClient(clients, reservations);
                 break;
             case 5:
-                reactivateClient(clients);
+                deactivateClient(clients);
                 break;
             case 6:
-                listInactiveClients(clients);
+                reactivateClient(clients);
                 break;
             case 7:
-                menuClient2(clients,reservations,spaces);
+                listInactiveClients(clients);
                 break;
             case 8:
+                menuClient2(clients,reservations,spaces);
+                break;
+            case 9:
                 saveClients(clients);
                 puts("RETURN TO MAIN MENU...");
                 return;
             default:
                 puts("Invalid option! Try Again!");
         }
-    } while (option != 8);
+    } while (option != 9);
 }
 
 //REPORT FUNCTIONS MENU CLIENT

@@ -206,6 +206,14 @@ void updateEquipment(equipmentManager *equipments); //FUNCTION TO UPDATE EQUIPME
 void reactivateEquipment(equipmentManager *equipments);
 
 /**
+ * @brief This function manually deactivates an equipment (marks it Inactive) without deleting it,
+ * regardless of whether it has reservations. Useful to temporarily take equipment out of service.
+ * @param equipmentManager are used to send the adress of the mains variables "equipments" to the following functions.
+ * @return This function does not return any value. Just deactivate the equipment.
+ */
+void deactivateEquipment(equipmentManager *equipments);
+
+/**
  * @brief This function find the equipments (searches both active and inactive equipment).
  * @param equipmentManager are used to send the adress of the mains variables "equipments" to the following functions.
  * @param id is used to find the id of the equipment

@@ -181,6 +181,14 @@ void updateClient(ClientList *list);
  */
 void reactivateClient(ClientList *list);
 
+/**
+ * @brief This function manually deactivates a client (marks it Inactive) without deleting it,
+ * regardless of whether it has reservations. Useful to temporarily suspend a client.
+ * @param ClientList are used to send the adress of the mains variables "list" to the following functions.
+ * @return This function does not return any value. Just deactivate the client.
+ */
+void deactivateClient(ClientList *list);
+
 // Reports
 /**
  * @brief This function show the total clients reports.
