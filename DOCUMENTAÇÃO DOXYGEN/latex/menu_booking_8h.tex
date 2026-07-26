@@ -1,0 +1,513 @@
+\doxysection{menu\+Booking.\+h File Reference}
+\hypertarget{menu_booking_8h}{}\label{menu_booking_8h}\index{menuBooking.h@{menuBooking.h}}
+{\ttfamily \#include "{}menu\+Equipment.\+h"{}}\newline
+{\ttfamily \#include "{}menu\+Space.\+h"{}}\newline
+{\ttfamily \#include "{}menu\+Client.\+h"{}}\newline
+{\ttfamily \#include "{}input.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_date_time}{Date\+Time}}
+\item 
+struct \mbox{\hyperlink{struct_reservation}{Reservation}}
+\item 
+struct \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{menu_booking_8h_a23d1ccb0a482f406617da9b5a8ba9581}{MAX\+\_\+\+RESERVATIONS}}~100
+\item 
+\#define \mbox{\hyperlink{menu_booking_8h_aad05f3ccd953716f80d630f8c9a88906}{MIN\+\_\+\+RESERVATIONS}}~1
+\item 
+\#define \mbox{\hyperlink{menu_booking_8h_a255771345d47d841326148616685d0f1}{MSG\+\_\+\+RESERVATION\+\_\+\+ID}}~"{}Enter the reservation ID\+: "{}
+\item 
+\#define \mbox{\hyperlink{menu_booking_8h_a6793f19a9dba9560e7d9685e202ade0e}{STATUS\+\_\+\+PENDING}}~1
+\item 
+\#define \mbox{\hyperlink{menu_booking_8h_a72ea2ee7145b69e61ff3e7a0a842ba04}{STATUS\+\_\+\+CONFIRMED}}~2
+\item 
+\#define \mbox{\hyperlink{menu_booking_8h_ad72a56693d5bf11751d10f5ea8c797b7}{STATUS\+\_\+\+CANCELED}}~3
+\item 
+\#define \mbox{\hyperlink{menu_booking_8h_ac320b092a0a483f8a2a712a83b8c39bd}{MSG\+\_\+\+RESERVATION\+\_\+\+STATUS}}~"{}Enter the reservation status (1.Pending, 2.Confirmed, 3.Canceled)\+: "{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_booking_8h_a568b077fe18a772a46046f0e54e5d7dd}{create\+Reservation}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations, \mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}clients, \mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, \mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function create the reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a46bda51b1cfe0778d7b639d98d0c82a1}{initialize\+Reservation\+List}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations, int initial\+Capacity)
+\begin{DoxyCompactList}\small\item\em This function initializes the reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_ab983b8a996b43882a6e867b0bbdc3e01}{free\+Reservation\+List}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function free the reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_adebcc6f98e02c3a0a3e0ef733a4c3fd0}{list\+Reservations}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function list the reservations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_booking_8h_a8e67d8c534a22db6f85afaab08fc9f09}{search\+Reservation}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations, int reservation\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function search the reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a293065bfd2af143f67761ce90bd687cb}{update\+Reservation}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations, int reservation\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function update the reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a6427e3462072914f9024e821cfbeac88}{delete\+Reservation}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations, \mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, \mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments, int reservation\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function delete the reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a200b78c0ff5a220d5f7f0ec275dc71b5}{total\+Reservations}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function show the total reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_af83728744b678d2c04ee6afc28f6c139}{listreservations\+By\+Status}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function show the reservations by status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_afceb9ccd16bdfcbf37468a5b2c567a2b}{most\+Participants\+Reservation}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function show the most participants reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_adad57fdc78f0483dc29fa8fe8a53e6e1}{least\+Participants\+Reservation}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function show the least participants reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a0d9f8bdb1c5ede2aa792024ce9bac871}{turn\+On\+Booking}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function initializes the reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_ab326529bf65b020252dad2c19e54b810}{save\+Reservations}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function saves the record in reservations, for example Create, List, Update and Remove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_aac49211dbf153a633804d1b0c093dae3}{load\+Reservations}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function load the record in reservations, for example Create, List, Update and Remove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a49abe241d7d2bbce8df045710f529f63}{reservations\+By\+Status}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function do the reservations by status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a7a9f006356be0c024004d01daf6ac936}{most\+Active\+Client}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list, \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function show the most Active \doxylink{struct_client}{Client}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_booking_8h_a4f539b1ce4787290f4e59e17f5dc8704}{find\+Space}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, int space\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function find the \doxylink{struct_space}{Space}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a6de443b3ba2c581a437a9bcc4f7eb82c}{least\+Reservations\+Client}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}clients, \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function show the least Reservations \doxylink{struct_client}{Client}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a1dc537f359b38da646c10c78a1c7d786}{most\+Space\+Reservated}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function show the most space reserved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_a7bf3f1203d455a22e55d54cc3b1d48fe}{least\+Space\+Reservated}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function show the least space reserved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_booking_8h_ad995400e35b7447b6de0cfc2c3ea7cd7}{cancel\+Reservation}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations, \mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, \mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments, int reservation\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function cancel the reservation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{menu_booking_8h_a23d1ccb0a482f406617da9b5a8ba9581}\index{menuBooking.h@{menuBooking.h}!MAX\_RESERVATIONS@{MAX\_RESERVATIONS}}
+\index{MAX\_RESERVATIONS@{MAX\_RESERVATIONS}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_RESERVATIONS}{MAX\_RESERVATIONS}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a23d1ccb0a482f406617da9b5a8ba9581} 
+\#define MAX\+\_\+\+RESERVATIONS~100}
+
+Maximum reservations available. \Hypertarget{menu_booking_8h_aad05f3ccd953716f80d630f8c9a88906}\index{menuBooking.h@{menuBooking.h}!MIN\_RESERVATIONS@{MIN\_RESERVATIONS}}
+\index{MIN\_RESERVATIONS@{MIN\_RESERVATIONS}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_RESERVATIONS}{MIN\_RESERVATIONS}}
+{\footnotesize\ttfamily \label{menu_booking_8h_aad05f3ccd953716f80d630f8c9a88906} 
+\#define MIN\+\_\+\+RESERVATIONS~1}
+
+Minimun reservations available. \Hypertarget{menu_booking_8h_a255771345d47d841326148616685d0f1}\index{menuBooking.h@{menuBooking.h}!MSG\_RESERVATION\_ID@{MSG\_RESERVATION\_ID}}
+\index{MSG\_RESERVATION\_ID@{MSG\_RESERVATION\_ID}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_RESERVATION\_ID}{MSG\_RESERVATION\_ID}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a255771345d47d841326148616685d0f1} 
+\#define MSG\+\_\+\+RESERVATION\+\_\+\+ID~"{}Enter the reservation ID\+: "{}}
+
+Message to enter reservation ID. \Hypertarget{menu_booking_8h_ac320b092a0a483f8a2a712a83b8c39bd}\index{menuBooking.h@{menuBooking.h}!MSG\_RESERVATION\_STATUS@{MSG\_RESERVATION\_STATUS}}
+\index{MSG\_RESERVATION\_STATUS@{MSG\_RESERVATION\_STATUS}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_RESERVATION\_STATUS}{MSG\_RESERVATION\_STATUS}}
+{\footnotesize\ttfamily \label{menu_booking_8h_ac320b092a0a483f8a2a712a83b8c39bd} 
+\#define MSG\+\_\+\+RESERVATION\+\_\+\+STATUS~"{}Enter the reservation status (1.Pending, 2.Confirmed, 3.Canceled)\+: "{}}
+
+Message to enter reservation status. \Hypertarget{menu_booking_8h_ad72a56693d5bf11751d10f5ea8c797b7}\index{menuBooking.h@{menuBooking.h}!STATUS\_CANCELED@{STATUS\_CANCELED}}
+\index{STATUS\_CANCELED@{STATUS\_CANCELED}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{STATUS\_CANCELED}{STATUS\_CANCELED}}
+{\footnotesize\ttfamily \label{menu_booking_8h_ad72a56693d5bf11751d10f5ea8c797b7} 
+\#define STATUS\+\_\+\+CANCELED~3}
+
+Canceled book status. \Hypertarget{menu_booking_8h_a72ea2ee7145b69e61ff3e7a0a842ba04}\index{menuBooking.h@{menuBooking.h}!STATUS\_CONFIRMED@{STATUS\_CONFIRMED}}
+\index{STATUS\_CONFIRMED@{STATUS\_CONFIRMED}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{STATUS\_CONFIRMED}{STATUS\_CONFIRMED}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a72ea2ee7145b69e61ff3e7a0a842ba04} 
+\#define STATUS\+\_\+\+CONFIRMED~2}
+
+Confirmed book status. \Hypertarget{menu_booking_8h_a6793f19a9dba9560e7d9685e202ade0e}\index{menuBooking.h@{menuBooking.h}!STATUS\_PENDING@{STATUS\_PENDING}}
+\index{STATUS\_PENDING@{STATUS\_PENDING}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{STATUS\_PENDING}{STATUS\_PENDING}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a6793f19a9dba9560e7d9685e202ade0e} 
+\#define STATUS\+\_\+\+PENDING~1}
+
+Pending book status. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_booking_8h_ad995400e35b7447b6de0cfc2c3ea7cd7}\index{menuBooking.h@{menuBooking.h}!cancelReservation@{cancelReservation}}
+\index{cancelReservation@{cancelReservation}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{cancelReservation()}{cancelReservation()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_ad995400e35b7447b6de0cfc2c3ea7cd7} 
+void cancel\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{, }\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{, }\item[{int}]{reservation\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+This function cancel the reservation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List},\doxylink{structgeral_spaces}{geral\+Spaces},\doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}reservations"{},"{}spaces"{},"{}equipments to the following functions. \\
+\hline
+{\em reservation\+\_\+id} & is used to find the reservation to cancel \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just cancel the reservation for the id. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a568b077fe18a772a46046f0e54e5d7dd}\index{menuBooking.h@{menuBooking.h}!createReservation@{createReservation}}
+\index{createReservation@{createReservation}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{createReservation()}{createReservation()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a568b077fe18a772a46046f0e54e5d7dd} 
+void create\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{, }\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{clients}{, }\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function create the reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List},\doxylink{struct_client_list}{Client\+List},\doxylink{structgeral_spaces}{geral\+Spaces},\doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}reservations"{},"{}clients"{},spaces"{},"{}equipments to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just create the reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a6427e3462072914f9024e821cfbeac88}\index{menuBooking.h@{menuBooking.h}!deleteReservation@{deleteReservation}}
+\index{deleteReservation@{deleteReservation}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{deleteReservation()}{deleteReservation()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a6427e3462072914f9024e821cfbeac88} 
+void delete\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{, }\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{, }\item[{int}]{reservation\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+This function delete the reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List},\doxylink{structgeral_spaces}{geral\+Spaces},\doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}reservations"{},"{}spaces"{},"{}equipments"{} to the following functions. \\
+\hline
+{\em reservation\+\_\+id} & to found the reservation to delete. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just delete the reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a4f539b1ce4787290f4e59e17f5dc8704}\index{menuBooking.h@{menuBooking.h}!findSpace@{findSpace}}
+\index{findSpace@{findSpace}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{findSpace()}{findSpace()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a4f539b1ce4787290f4e59e17f5dc8704} 
+int find\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{int}]{space\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+This function find the \doxylink{struct_space}{Space}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+{\em space\+\_\+id} & is used to find the space for the id. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function return i if the space has found or -\/1 if space has not found. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_ab983b8a996b43882a6e867b0bbdc3e01}\index{menuBooking.h@{menuBooking.h}!freeReservationList@{freeReservationList}}
+\index{freeReservationList@{freeReservationList}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{freeReservationList()}{freeReservationList()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_ab983b8a996b43882a6e867b0bbdc3e01} 
+void free\+Reservation\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function free the reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just free the reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a46bda51b1cfe0778d7b639d98d0c82a1}\index{menuBooking.h@{menuBooking.h}!initializeReservationList@{initializeReservationList}}
+\index{initializeReservationList@{initializeReservationList}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{initializeReservationList()}{initializeReservationList()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a46bda51b1cfe0778d7b639d98d0c82a1} 
+void initialize\+Reservation\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{, }\item[{int}]{initial\+Capacity}{}\end{DoxyParamCaption})}
+
+
+
+This function initializes the reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. initial\+Capacity to define the initial\+Capacity \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just inicialize the reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_adad57fdc78f0483dc29fa8fe8a53e6e1}\index{menuBooking.h@{menuBooking.h}!leastParticipantsReservation@{leastParticipantsReservation}}
+\index{leastParticipantsReservation@{leastParticipantsReservation}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{leastParticipantsReservation()}{leastParticipantsReservation()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_adad57fdc78f0483dc29fa8fe8a53e6e1} 
+void least\+Participants\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function show the least participants reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the least participants reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a6de443b3ba2c581a437a9bcc4f7eb82c}\index{menuBooking.h@{menuBooking.h}!leastReservationsClient@{leastReservationsClient}}
+\index{leastReservationsClient@{leastReservationsClient}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{leastReservationsClient()}{leastReservationsClient()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a6de443b3ba2c581a437a9bcc4f7eb82c} 
+void least\+Reservations\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{clients}{, }\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function show the least Reservations \doxylink{struct_client}{Client}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List},\doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}list"{},reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the least Reservations \doxylink{struct_client}{Client}. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a7bf3f1203d455a22e55d54cc3b1d48fe}\index{menuBooking.h@{menuBooking.h}!leastSpaceReservated@{leastSpaceReservated}}
+\index{leastSpaceReservated@{leastSpaceReservated}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{leastSpaceReservated()}{leastSpaceReservated()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a7bf3f1203d455a22e55d54cc3b1d48fe} 
+void least\+Space\+Reservated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function show the least space reserved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces},\doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}spaces"{},reservations"{} to the following functions. @return This function does not return any value. Just show the least space reserved.  \+This function show the least space reserved.  @param geral\+Spaces are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. show the least spaces reserved. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_adebcc6f98e02c3a0a3e0ef733a4c3fd0}\index{menuBooking.h@{menuBooking.h}!listReservations@{listReservations}}
+\index{listReservations@{listReservations}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{listReservations()}{listReservations()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_adebcc6f98e02c3a0a3e0ef733a4c3fd0} 
+void list\+Reservations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function list the reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just list the reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_af83728744b678d2c04ee6afc28f6c139}\index{menuBooking.h@{menuBooking.h}!listreservationsByStatus@{listreservationsByStatus}}
+\index{listreservationsByStatus@{listreservationsByStatus}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{listreservationsByStatus()}{listreservationsByStatus()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_af83728744b678d2c04ee6afc28f6c139} 
+void listreservations\+By\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function show the reservations by status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the reservations by status. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_aac49211dbf153a633804d1b0c093dae3}\index{menuBooking.h@{menuBooking.h}!loadReservations@{loadReservations}}
+\index{loadReservations@{loadReservations}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{loadReservations()}{loadReservations()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_aac49211dbf153a633804d1b0c093dae3} 
+void load\+Reservations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function load the record in reservations, for example Create, List, Update and Remove. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Its only load the reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a7a9f006356be0c024004d01daf6ac936}\index{menuBooking.h@{menuBooking.h}!mostActiveClient@{mostActiveClient}}
+\index{mostActiveClient@{mostActiveClient}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{mostActiveClient()}{mostActiveClient()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a7a9f006356be0c024004d01daf6ac936} 
+void most\+Active\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function show the most Active \doxylink{struct_client}{Client}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List},\doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}list"{},reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the most Active \doxylink{struct_client}{Client}. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_afceb9ccd16bdfcbf37468a5b2c567a2b}\index{menuBooking.h@{menuBooking.h}!mostParticipantsReservation@{mostParticipantsReservation}}
+\index{mostParticipantsReservation@{mostParticipantsReservation}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{mostParticipantsReservation()}{mostParticipantsReservation()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_afceb9ccd16bdfcbf37468a5b2c567a2b} 
+void most\+Participants\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function show the most participants reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the most participants reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a1dc537f359b38da646c10c78a1c7d786}\index{menuBooking.h@{menuBooking.h}!mostSpaceReservated@{mostSpaceReservated}}
+\index{mostSpaceReservated@{mostSpaceReservated}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{mostSpaceReservated()}{mostSpaceReservated()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a1dc537f359b38da646c10c78a1c7d786} 
+void most\+Space\+Reservated (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function show the most space reserved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces},\doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}spaces"{},reservations"{} to the following functions. @return This function does not return any value. Just show the most space reserved.  \+This function show the most space reserved.  @param geral\+Spaces are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the most spaces reserved. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a49abe241d7d2bbce8df045710f529f63}\index{menuBooking.h@{menuBooking.h}!reservationsByStatus@{reservationsByStatus}}
+\index{reservationsByStatus@{reservationsByStatus}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{reservationsByStatus()}{reservationsByStatus()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a49abe241d7d2bbce8df045710f529f63} 
+void reservations\+By\+Status (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function do the reservations by status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just do the reservations by status. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_ab326529bf65b020252dad2c19e54b810}\index{menuBooking.h@{menuBooking.h}!saveReservations@{saveReservations}}
+\index{saveReservations@{saveReservations}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{saveReservations()}{saveReservations()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_ab326529bf65b020252dad2c19e54b810} 
+void save\+Reservations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function saves the record in reservations, for example Create, List, Update and Remove. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Its only save the reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a8e67d8c534a22db6f85afaab08fc9f09}\index{menuBooking.h@{menuBooking.h}!searchReservation@{searchReservation}}
+\index{searchReservation@{searchReservation}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{searchReservation()}{searchReservation()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a8e67d8c534a22db6f85afaab08fc9f09} 
+int search\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{, }\item[{int}]{reservation\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+This function search the reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+{\em reservation\+\_\+id} & is used to find the reservation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function return i if reservation is found or -\/1 if reservation is not found. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a200b78c0ff5a220d5f7f0ec275dc71b5}\index{menuBooking.h@{menuBooking.h}!totalReservations@{totalReservations}}
+\index{totalReservations@{totalReservations}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{totalReservations()}{totalReservations()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a200b78c0ff5a220d5f7f0ec275dc71b5} 
+void total\+Reservations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function show the total reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the total reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a0d9f8bdb1c5ede2aa792024ce9bac871}\index{menuBooking.h@{menuBooking.h}!turnOnBooking@{turnOnBooking}}
+\index{turnOnBooking@{turnOnBooking}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{turnOnBooking()}{turnOnBooking()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a0d9f8bdb1c5ede2aa792024ce9bac871} 
+void turn\+On\+Booking (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function initializes the reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just inicialize the reservations. 
+\end{DoxyReturn}
+\Hypertarget{menu_booking_8h_a293065bfd2af143f67761ce90bd687cb}\index{menuBooking.h@{menuBooking.h}!updateReservation@{updateReservation}}
+\index{updateReservation@{updateReservation}!menuBooking.h@{menuBooking.h}}
+\doxysubsubsection{\texorpdfstring{updateReservation()}{updateReservation()}}
+{\footnotesize\ttfamily \label{menu_booking_8h_a293065bfd2af143f67761ce90bd687cb} 
+void update\+Reservation (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{, }\item[{int}]{reservation\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+This function update the reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List}} & are used to send the adress of the mains variables "{}reservations"{} to the following functions. \\
+\hline
+{\em reservation\+\_\+id} & to found the reservation to update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just update the reservations. 
+\end{DoxyReturn}

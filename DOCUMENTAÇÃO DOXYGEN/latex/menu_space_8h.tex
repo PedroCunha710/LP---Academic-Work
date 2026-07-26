@@ -1,0 +1,439 @@
+\doxysection{menu\+Space.\+h File Reference}
+\hypertarget{menu_space_8h}{}\label{menu_space_8h}\index{menuSpace.h@{menuSpace.h}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_space}{Space}}
+\item 
+struct \mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_ac7c0207aa5a0e10d378be03b68041350}{MAX\+\_\+\+NAME}}~50
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_a5f54fd55f983a2e33ce076cd9f587e82}{MAX\+\_\+\+SPACES}}~10
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_aaeeceab4e341647aea67df00552f85b2}{ID\+\_\+\+NOT\+\_\+\+FOUND}}~"{}ID NOT FOUND"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_a5de7c5540be3a4338e9af1c8e3e05161}{NOT\+\_\+\+SAVED\+\_\+\+SPACE}}~"{}NO SPACES TO SAVE!!"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_ab5803a3e3681d26526bd3dc76e7cc23e}{NOT\+\_\+\+SPACE\+\_\+\+SHOW}}~"{}NO SPACES TO SHOW!"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_a636ab1ce4b559a731392b297bb699b8b}{NOT\+\_\+\+SPACE\+\_\+\+UPDATE}}~"{}NO SPACES TO UPDATE"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_a2abefb668ce6949eb2945241d2d88e85}{NOT\+\_\+\+SPACE\+\_\+\+DELETE}}~"{}NO SPACES TO DELETE!"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_a8e8883e35160e8eeae0a0db91f951e0f}{ERROR\+\_\+\+SAVING\+\_\+\+SPACE}}~"{}ERROR SAVING SPACE!!"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_ac13685d346c1565bb448520e504cd992}{SAVED\+\_\+\+SPACE}}~"{}SPACE SAVED SUCESSFULLY"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_adf2e83f81d76feb3ffe0b02695594477}{NOT\+\_\+\+LOADED\+\_\+\+SPACE}}~"{}NO SPACE FILES FOUND! INICIALIZATING EMPTY LIST"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_ad0b3f7fc9819e0ebbf5b24ea0deec2ec}{ALLOC\+\_\+\+MEMORY\+\_\+\+LOAD}}~"{}ERROR ALLOCATING MEMORY!"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_acb9112ce1982e86ca1bfef106b21de5d}{LOADED\+\_\+\+SPACE}}~"{}SPACES LOADED SUCESSFULLY"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_abe7bdc3d6b17e54253ddfed7c5193d1c}{TURN\+\_\+\+ON\+\_\+\+SPACE}}~"{}ERROR ALLOCATING MEMORY FOR SPACE!"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_a4bfa561bdd6a159249d6392f498496eb}{CREATE\+\_\+\+SPACE}}~"{}\textbackslash{}n\+SPACE CREATED SUCESSFULLY!"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_ae02b82e2a8f9c981f269d01ac0a209c3}{DELETE\+\_\+\+SPACE}}~"{}SPACE DELETED SUCESSFULLY!"{}
+\item 
+\#define \mbox{\hyperlink{menu_space_8h_a90a50b6193f16dad1ff6af66d13fbf2c}{UPDATE\+\_\+\+SPACE}}~"{}SPACE UPDATED SUCESSFULLY"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8}{space\+Type}} \{ \newline
+\mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a8529a3fc39cb605322af1ab41abb05bf}{AUDITORIUM}}
+, \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a5b3a56c77bccf699ac62d8967056c553}{MEETING\+\_\+\+ROOM}}
+, \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8accf8b93272bc412ab821786de7484005}{EXTERNAL\+\_\+\+SPACE}}
+, \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a5f2abfe75d61f7ce3b0fbb133caa9149}{PARTY\+\_\+\+ROOM}}
+, \newline
+\mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a8d3312a1ea025393f6830796acce9f9f}{CONFERENCE\+\_\+\+ROOM}}
+, \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a6ce26a62afab55d7606ad4e92428b30c}{UNKNOWN}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_space_8h_aa3f4050abc92e76720ef1d33994e6455}{save\+Space}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function saves the record in spaces, for example Create, List, Update and Remove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_a76615185c870b4f6396e44b66b3d2792}{load\+Space}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function load the record in spaces, for example Create, List, Update and Remove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_ab8ec6d268bee1e885b648c98abbf41ea}{turn\+On\+Spaces}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function initializes the spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_a512515063280595b1e98e4a3924e006f}{realloc\+Spaces}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function realloc the spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_a0fecd6325c4107e3a844e788b41f42ff}{free\+Spaces}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function free the spaces. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_space_8h_ac1e7fe29bc3e5030ed759881a480a143}{space\+Occupied}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, int space\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function search if spaces is occupied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_a5c7bbc6c15c3498f9a91280697ffc27f}{create\+Space}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function create the spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_a424d937f73cbe85460613b1099ace66b}{list\+Space}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function list the spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_af88d5839b2d86c0388cc0f3187cd11dc}{update\+Space}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function update the spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_a08e15e0f353b9944b97340d4a8810e1c}{delete\+Space}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function delete the spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_a5da64461cc7aebae484b599149471c55}{total\+Avaliable\+Spaces}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function show the total avaliable spaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_space_8h_a6270abf672910ea81d95acc70a916193}{spaces\+By\+Type}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces)
+\begin{DoxyCompactList}\small\item\em This function show spaces by type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{menu_space_8h_ad0b3f7fc9819e0ebbf5b24ea0deec2ec}\index{menuSpace.h@{menuSpace.h}!ALLOC\_MEMORY\_LOAD@{ALLOC\_MEMORY\_LOAD}}
+\index{ALLOC\_MEMORY\_LOAD@{ALLOC\_MEMORY\_LOAD}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{ALLOC\_MEMORY\_LOAD}{ALLOC\_MEMORY\_LOAD}}
+{\footnotesize\ttfamily \label{menu_space_8h_ad0b3f7fc9819e0ebbf5b24ea0deec2ec} 
+\#define ALLOC\+\_\+\+MEMORY\+\_\+\+LOAD~"{}ERROR ALLOCATING MEMORY!"{}}
+
+Message displayed when there is an error allocating memory to load spaces. \Hypertarget{menu_space_8h_a4bfa561bdd6a159249d6392f498496eb}\index{menuSpace.h@{menuSpace.h}!CREATE\_SPACE@{CREATE\_SPACE}}
+\index{CREATE\_SPACE@{CREATE\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{CREATE\_SPACE}{CREATE\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_a4bfa561bdd6a159249d6392f498496eb} 
+\#define CREATE\+\_\+\+SPACE~"{}\textbackslash{}n\+SPACE CREATED SUCESSFULLY!"{}}
+
+Message displayed when space is created successfully. \Hypertarget{menu_space_8h_ae02b82e2a8f9c981f269d01ac0a209c3}\index{menuSpace.h@{menuSpace.h}!DELETE\_SPACE@{DELETE\_SPACE}}
+\index{DELETE\_SPACE@{DELETE\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{DELETE\_SPACE}{DELETE\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_ae02b82e2a8f9c981f269d01ac0a209c3} 
+\#define DELETE\+\_\+\+SPACE~"{}SPACE DELETED SUCESSFULLY!"{}}
+
+Message displayed when space is deleted successfully. \Hypertarget{menu_space_8h_a8e8883e35160e8eeae0a0db91f951e0f}\index{menuSpace.h@{menuSpace.h}!ERROR\_SAVING\_SPACE@{ERROR\_SAVING\_SPACE}}
+\index{ERROR\_SAVING\_SPACE@{ERROR\_SAVING\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_SAVING\_SPACE}{ERROR\_SAVING\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_a8e8883e35160e8eeae0a0db91f951e0f} 
+\#define ERROR\+\_\+\+SAVING\+\_\+\+SPACE~"{}ERROR SAVING SPACE!!"{}}
+
+Message displayed when there is an error saving spaces. \Hypertarget{menu_space_8h_aaeeceab4e341647aea67df00552f85b2}\index{menuSpace.h@{menuSpace.h}!ID\_NOT\_FOUND@{ID\_NOT\_FOUND}}
+\index{ID\_NOT\_FOUND@{ID\_NOT\_FOUND}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{ID\_NOT\_FOUND}{ID\_NOT\_FOUND}}
+{\footnotesize\ttfamily \label{menu_space_8h_aaeeceab4e341647aea67df00552f85b2} 
+\#define ID\+\_\+\+NOT\+\_\+\+FOUND~"{}ID NOT FOUND"{}}
+
+Message displayed when an ID is not found. \Hypertarget{menu_space_8h_acb9112ce1982e86ca1bfef106b21de5d}\index{menuSpace.h@{menuSpace.h}!LOADED\_SPACE@{LOADED\_SPACE}}
+\index{LOADED\_SPACE@{LOADED\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{LOADED\_SPACE}{LOADED\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_acb9112ce1982e86ca1bfef106b21de5d} 
+\#define LOADED\+\_\+\+SPACE~"{}SPACES LOADED SUCESSFULLY"{}}
+
+Message displayed when spaces are loaded successfully. \Hypertarget{menu_space_8h_ac7c0207aa5a0e10d378be03b68041350}\index{menuSpace.h@{menuSpace.h}!MAX\_NAME@{MAX\_NAME}}
+\index{MAX\_NAME@{MAX\_NAME}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_NAME}{MAX\_NAME}}
+{\footnotesize\ttfamily \label{menu_space_8h_ac7c0207aa5a0e10d378be03b68041350} 
+\#define MAX\+\_\+\+NAME~50}
+
+Maximum length for a name. \Hypertarget{menu_space_8h_a5f54fd55f983a2e33ce076cd9f587e82}\index{menuSpace.h@{menuSpace.h}!MAX\_SPACES@{MAX\_SPACES}}
+\index{MAX\_SPACES@{MAX\_SPACES}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_SPACES}{MAX\_SPACES}}
+{\footnotesize\ttfamily \label{menu_space_8h_a5f54fd55f983a2e33ce076cd9f587e82} 
+\#define MAX\+\_\+\+SPACES~10}
+
+Maximum number of spaces allowed in the system. \Hypertarget{menu_space_8h_adf2e83f81d76feb3ffe0b02695594477}\index{menuSpace.h@{menuSpace.h}!NOT\_LOADED\_SPACE@{NOT\_LOADED\_SPACE}}
+\index{NOT\_LOADED\_SPACE@{NOT\_LOADED\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_LOADED\_SPACE}{NOT\_LOADED\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_adf2e83f81d76feb3ffe0b02695594477} 
+\#define NOT\+\_\+\+LOADED\+\_\+\+SPACE~"{}NO SPACE FILES FOUND! INICIALIZATING EMPTY LIST"{}}
+
+Message displayed when no space files are found. \Hypertarget{menu_space_8h_a5de7c5540be3a4338e9af1c8e3e05161}\index{menuSpace.h@{menuSpace.h}!NOT\_SAVED\_SPACE@{NOT\_SAVED\_SPACE}}
+\index{NOT\_SAVED\_SPACE@{NOT\_SAVED\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_SAVED\_SPACE}{NOT\_SAVED\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_a5de7c5540be3a4338e9af1c8e3e05161} 
+\#define NOT\+\_\+\+SAVED\+\_\+\+SPACE~"{}NO SPACES TO SAVE!!"{}}
+
+Message displayed when there are no spaces to save. \Hypertarget{menu_space_8h_a2abefb668ce6949eb2945241d2d88e85}\index{menuSpace.h@{menuSpace.h}!NOT\_SPACE\_DELETE@{NOT\_SPACE\_DELETE}}
+\index{NOT\_SPACE\_DELETE@{NOT\_SPACE\_DELETE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_SPACE\_DELETE}{NOT\_SPACE\_DELETE}}
+{\footnotesize\ttfamily \label{menu_space_8h_a2abefb668ce6949eb2945241d2d88e85} 
+\#define NOT\+\_\+\+SPACE\+\_\+\+DELETE~"{}NO SPACES TO DELETE!"{}}
+
+Message displayed when there are no spaces to delete. \Hypertarget{menu_space_8h_ab5803a3e3681d26526bd3dc76e7cc23e}\index{menuSpace.h@{menuSpace.h}!NOT\_SPACE\_SHOW@{NOT\_SPACE\_SHOW}}
+\index{NOT\_SPACE\_SHOW@{NOT\_SPACE\_SHOW}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_SPACE\_SHOW}{NOT\_SPACE\_SHOW}}
+{\footnotesize\ttfamily \label{menu_space_8h_ab5803a3e3681d26526bd3dc76e7cc23e} 
+\#define NOT\+\_\+\+SPACE\+\_\+\+SHOW~"{}NO SPACES TO SHOW!"{}}
+
+Message displayed when there are no spaces to show. \Hypertarget{menu_space_8h_a636ab1ce4b559a731392b297bb699b8b}\index{menuSpace.h@{menuSpace.h}!NOT\_SPACE\_UPDATE@{NOT\_SPACE\_UPDATE}}
+\index{NOT\_SPACE\_UPDATE@{NOT\_SPACE\_UPDATE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_SPACE\_UPDATE}{NOT\_SPACE\_UPDATE}}
+{\footnotesize\ttfamily \label{menu_space_8h_a636ab1ce4b559a731392b297bb699b8b} 
+\#define NOT\+\_\+\+SPACE\+\_\+\+UPDATE~"{}NO SPACES TO UPDATE"{}}
+
+Message displayed when there are no spaces to update. \Hypertarget{menu_space_8h_ac13685d346c1565bb448520e504cd992}\index{menuSpace.h@{menuSpace.h}!SAVED\_SPACE@{SAVED\_SPACE}}
+\index{SAVED\_SPACE@{SAVED\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{SAVED\_SPACE}{SAVED\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_ac13685d346c1565bb448520e504cd992} 
+\#define SAVED\+\_\+\+SPACE~"{}SPACE SAVED SUCESSFULLY"{}}
+
+Message displayed when spaces are saved successfully. \Hypertarget{menu_space_8h_abe7bdc3d6b17e54253ddfed7c5193d1c}\index{menuSpace.h@{menuSpace.h}!TURN\_ON\_SPACE@{TURN\_ON\_SPACE}}
+\index{TURN\_ON\_SPACE@{TURN\_ON\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{TURN\_ON\_SPACE}{TURN\_ON\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_abe7bdc3d6b17e54253ddfed7c5193d1c} 
+\#define TURN\+\_\+\+ON\+\_\+\+SPACE~"{}ERROR ALLOCATING MEMORY FOR SPACE!"{}}
+
+Message displayed when there is an error turning on the space. \Hypertarget{menu_space_8h_a90a50b6193f16dad1ff6af66d13fbf2c}\index{menuSpace.h@{menuSpace.h}!UPDATE\_SPACE@{UPDATE\_SPACE}}
+\index{UPDATE\_SPACE@{UPDATE\_SPACE}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{UPDATE\_SPACE}{UPDATE\_SPACE}}
+{\footnotesize\ttfamily \label{menu_space_8h_a90a50b6193f16dad1ff6af66d13fbf2c} 
+\#define UPDATE\+\_\+\+SPACE~"{}SPACE UPDATED SUCESSFULLY"{}}
+
+Message displayed when space is updated successfully. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8}\index{menuSpace.h@{menuSpace.h}!spaceType@{spaceType}}
+\index{spaceType@{spaceType}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{spaceType}{spaceType}}
+{\footnotesize\ttfamily \label{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8} 
+enum \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8}{space\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AUDITORIUM@{AUDITORIUM}!menuSpace.h@{menuSpace.h}}\index{menuSpace.h@{menuSpace.h}!AUDITORIUM@{AUDITORIUM}}}\Hypertarget{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a8529a3fc39cb605322af1ab41abb05bf}\label{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8} 
+AUDITORIUM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MEETING\_ROOM@{MEETING\_ROOM}!menuSpace.h@{menuSpace.h}}\index{menuSpace.h@{menuSpace.h}!MEETING\_ROOM@{MEETING\_ROOM}}}\Hypertarget{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a5b3a56c77bccf699ac62d8967056c553}\label{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8} 
+MEETING\+\_\+\+ROOM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTERNAL\_SPACE@{EXTERNAL\_SPACE}!menuSpace.h@{menuSpace.h}}\index{menuSpace.h@{menuSpace.h}!EXTERNAL\_SPACE@{EXTERNAL\_SPACE}}}\Hypertarget{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8accf8b93272bc412ab821786de7484005}\label{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8} 
+EXTERNAL\+\_\+\+SPACE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PARTY\_ROOM@{PARTY\_ROOM}!menuSpace.h@{menuSpace.h}}\index{menuSpace.h@{menuSpace.h}!PARTY\_ROOM@{PARTY\_ROOM}}}\Hypertarget{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a5f2abfe75d61f7ce3b0fbb133caa9149}\label{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8} 
+PARTY\+\_\+\+ROOM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONFERENCE\_ROOM@{CONFERENCE\_ROOM}!menuSpace.h@{menuSpace.h}}\index{menuSpace.h@{menuSpace.h}!CONFERENCE\_ROOM@{CONFERENCE\_ROOM}}}\Hypertarget{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a8d3312a1ea025393f6830796acce9f9f}\label{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8} 
+CONFERENCE\+\_\+\+ROOM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNKNOWN@{UNKNOWN}!menuSpace.h@{menuSpace.h}}\index{menuSpace.h@{menuSpace.h}!UNKNOWN@{UNKNOWN}}}\Hypertarget{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a6ce26a62afab55d7606ad4e92428b30c}\label{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8} 
+UNKNOWN&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_space_8h_a5c7bbc6c15c3498f9a91280697ffc27f}\index{menuSpace.h@{menuSpace.h}!createSpace@{createSpace}}
+\index{createSpace@{createSpace}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{createSpace()}{createSpace()}}
+{\footnotesize\ttfamily \label{menu_space_8h_a5c7bbc6c15c3498f9a91280697ffc27f} 
+void create\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function create the spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just create the spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_a08e15e0f353b9944b97340d4a8810e1c}\index{menuSpace.h@{menuSpace.h}!deleteSpace@{deleteSpace}}
+\index{deleteSpace@{deleteSpace}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{deleteSpace()}{deleteSpace()}}
+{\footnotesize\ttfamily \label{menu_space_8h_a08e15e0f353b9944b97340d4a8810e1c} 
+void delete\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function delete the spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just delete the spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_a0fecd6325c4107e3a844e788b41f42ff}\index{menuSpace.h@{menuSpace.h}!freeSpaces@{freeSpaces}}
+\index{freeSpaces@{freeSpaces}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{freeSpaces()}{freeSpaces()}}
+{\footnotesize\ttfamily \label{menu_space_8h_a0fecd6325c4107e3a844e788b41f42ff} 
+void free\+Spaces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function free the spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just free the spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_a424d937f73cbe85460613b1099ace66b}\index{menuSpace.h@{menuSpace.h}!listSpace@{listSpace}}
+\index{listSpace@{listSpace}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{listSpace()}{listSpace()}}
+{\footnotesize\ttfamily \label{menu_space_8h_a424d937f73cbe85460613b1099ace66b} 
+void list\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function list the spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just list the spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_a76615185c870b4f6396e44b66b3d2792}\index{menuSpace.h@{menuSpace.h}!loadSpace@{loadSpace}}
+\index{loadSpace@{loadSpace}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{loadSpace()}{loadSpace()}}
+{\footnotesize\ttfamily \label{menu_space_8h_a76615185c870b4f6396e44b66b3d2792} 
+void load\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function load the record in spaces, for example Create, List, Update and Remove. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Its only load the spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_a512515063280595b1e98e4a3924e006f}\index{menuSpace.h@{menuSpace.h}!reallocSpaces@{reallocSpaces}}
+\index{reallocSpaces@{reallocSpaces}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{reallocSpaces()}{reallocSpaces()}}
+{\footnotesize\ttfamily \label{menu_space_8h_a512515063280595b1e98e4a3924e006f} 
+void realloc\+Spaces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function realloc the spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just Realloc the spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_aa3f4050abc92e76720ef1d33994e6455}\index{menuSpace.h@{menuSpace.h}!saveSpace@{saveSpace}}
+\index{saveSpace@{saveSpace}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{saveSpace()}{saveSpace()}}
+{\footnotesize\ttfamily \label{menu_space_8h_aa3f4050abc92e76720ef1d33994e6455} 
+void save\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function saves the record in spaces, for example Create, List, Update and Remove. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Its only save the spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_ac1e7fe29bc3e5030ed759881a480a143}\index{menuSpace.h@{menuSpace.h}!spaceOccupied@{spaceOccupied}}
+\index{spaceOccupied@{spaceOccupied}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{spaceOccupied()}{spaceOccupied()}}
+{\footnotesize\ttfamily \label{menu_space_8h_ac1e7fe29bc3e5030ed759881a480a143} 
+int space\+Occupied (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{int}]{space\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+This function search if spaces is occupied. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+{\em space\+\_\+id} & show if space is occupied to the reserve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does return 1 if space is occupied or 0 if space is avaiable. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_a6270abf672910ea81d95acc70a916193}\index{menuSpace.h@{menuSpace.h}!spacesByType@{spacesByType}}
+\index{spacesByType@{spacesByType}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{spacesByType()}{spacesByType()}}
+{\footnotesize\ttfamily \label{menu_space_8h_a6270abf672910ea81d95acc70a916193} 
+void spaces\+By\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function show spaces by type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just spaces by type. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_a5da64461cc7aebae484b599149471c55}\index{menuSpace.h@{menuSpace.h}!totalAvaliableSpaces@{totalAvaliableSpaces}}
+\index{totalAvaliableSpaces@{totalAvaliableSpaces}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{totalAvaliableSpaces()}{totalAvaliableSpaces()}}
+{\footnotesize\ttfamily \label{menu_space_8h_a5da64461cc7aebae484b599149471c55} 
+void total\+Avaliable\+Spaces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function show the total avaliable spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the total avaliable spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_ab8ec6d268bee1e885b648c98abbf41ea}\index{menuSpace.h@{menuSpace.h}!turnOnSpaces@{turnOnSpaces}}
+\index{turnOnSpaces@{turnOnSpaces}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{turnOnSpaces()}{turnOnSpaces()}}
+{\footnotesize\ttfamily \label{menu_space_8h_ab8ec6d268bee1e885b648c98abbf41ea} 
+void turn\+On\+Spaces (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function initializes the spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just inicialize the spaces. 
+\end{DoxyReturn}
+\Hypertarget{menu_space_8h_af88d5839b2d86c0388cc0f3187cd11dc}\index{menuSpace.h@{menuSpace.h}!updateSpace@{updateSpace}}
+\index{updateSpace@{updateSpace}!menuSpace.h@{menuSpace.h}}
+\doxysubsubsection{\texorpdfstring{updateSpace()}{updateSpace()}}
+{\footnotesize\ttfamily \label{menu_space_8h_af88d5839b2d86c0388cc0f3187cd11dc} 
+void update\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{}\end{DoxyParamCaption})}
+
+
+
+This function update the spaces. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & are used to send the adress of the mains variables "{}spaces"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just update the spaces. 
+\end{DoxyReturn}

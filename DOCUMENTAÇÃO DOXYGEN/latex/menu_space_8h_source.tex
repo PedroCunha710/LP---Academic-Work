@@ -1,0 +1,109 @@
+\doxysection{menu\+Space.\+h}
+\hypertarget{menu_space_8h_source}{}\label{menu_space_8h_source}\mbox{\hyperlink{menu_space_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ File:\ \ \ menuSpace.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Author:\ Pedro\ Cunha\ }}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Created\ on\ 20\ de\ dezembro\ de\ 2024,\ 13:51}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ @brief\ In\ this\ header\ file\ we\ will\ declare\ the\ functions\ of\ the\ spaces\ to\ use\ in\ other\ pages.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ This\ file\ contains\ the\ functions\ of\ the\ spaces\ to\ use\ in\ other\ pages.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MENUSPACE\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MENUSPACE\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ MAX\_NAME\ 50}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ MAX\_SPACES\ 10}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ ID\_NOT\_FOUND\ "{}ID\ NOT\ FOUND"{}}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#define\ NOT\_SAVED\_SPACE\ "{}NO\ SPACES\ TO\ SAVE!!"{}}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#define\ NOT\_SPACE\_SHOW\ "{}NO\ SPACES\ TO\ SHOW!"{}}}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#define\ NOT\_SPACE\_UPDATE\ "{}NO\ SPACES\ TO\ UPDATE"{}}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#define\ NOT\_SPACE\_DELETE\ "{}NO\ SPACES\ TO\ DELETE!"{}}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#define\ ERROR\_SAVING\_SPACE\ "{}ERROR\ SAVING\ SPACE!!"{}}}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ SAVED\_SPACE\ "{}SPACE\ SAVED\ SUCESSFULLY"{}}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ NOT\_LOADED\_SPACE\ "{}NO\ SPACE\ FILES\ FOUND!\ INICIALIZATING\ EMPTY\ LIST"{}}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ ALLOC\_MEMORY\_LOAD\ "{}ERROR\ ALLOCATING\ MEMORY!"{}}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ LOADED\_SPACE\ "{}SPACES\ LOADED\ SUCESSFULLY"{}}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ TURN\_ON\_SPACE\ "{}ERROR\ ALLOCATING\ MEMORY\ FOR\ SPACE!"{}}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ CREATE\_SPACE\ "{}\(\backslash\)nSPACE\ CREATED\ SUCESSFULLY!"{}}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ DELETE\_SPACE\ "{}SPACE\ DELETED\ SUCESSFULLY!"{}}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ UPDATE\_SPACE\ "{}SPACE\ UPDATED\ SUCESSFULLY"{}}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a8529a3fc39cb605322af1ab41abb05bf}{AUDITORIUM}},\ }
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a5b3a56c77bccf699ac62d8967056c553}{MEETING\_ROOM}},\ }
+\DoxyCodeLine{00108\ \ \ \ \ \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8accf8b93272bc412ab821786de7484005}{EXTERNAL\_SPACE}},}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a5f2abfe75d61f7ce3b0fbb133caa9149}{PARTY\_ROOM}},}
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a8d3312a1ea025393f6830796acce9f9f}{CONFERENCE\_ROOM}},}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8a6ce26a62afab55d7606ad4e92428b30c}{UNKNOWN}}}
+\DoxyCodeLine{00112\ \}\ \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8}{spaceType}};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \textcolor{comment}{//SPACE\ STRUCT}}
+\DoxyCodeLine{00115\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_space_a7441ef0865bcb3db9b8064dd7375c1ea}{id}};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{char}\ name[\mbox{\hyperlink{menu_space_8h_ac7c0207aa5a0e10d378be03b68041350}{MAX\_NAME}}];}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_space_adbe66a087ac3fd4a5b0566f64ca2d12b}{capacity}};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_space_ad2be9e8cdc7e96115771c52721f45a8b}{spaceOccupied}};}
+\DoxyCodeLine{00120\ \ \ \ \ \mbox{\hyperlink{menu_space_8h_aac6a18e7032b526e52000412ba4f18f8}{spaceType}}\ \mbox{\hyperlink{struct_space_a0e959081b34dfba16d9b9defcb6043d9}{type}};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_space_af7d865d957e0d4020b4d6f4827fa85c5}{reservations}};}
+\DoxyCodeLine{00122\ \ \ \ \ }
+\DoxyCodeLine{00123\ \}\ \mbox{\hyperlink{struct_space}{Space}};}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00125\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structgeral_spaces_a617a47c70795bcff659815ad0efd2266}{counter}};}
+\DoxyCodeLine{00127\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structgeral_spaces_adbe66a087ac3fd4a5b0566f64ca2d12b}{capacity}};}
+\DoxyCodeLine{00128\ \ \ \ \ \mbox{\hyperlink{struct_space}{Space}}\ *\mbox{\hyperlink{structgeral_spaces_a9c4b2ac78d054dfd6afd59c18034fc92}{spaceList}};}
+\DoxyCodeLine{00129\ \}\mbox{\hyperlink{structgeral_spaces}{geralSpaces}};}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{comment}{//FUNCTIONS}}
+\DoxyCodeLine{00137\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_aa3f4050abc92e76720ef1d33994e6455}{saveSpace}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00138\ }
+\DoxyCodeLine{00144\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_a76615185c870b4f6396e44b66b3d2792}{loadSpace}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \textcolor{comment}{//OTHER\ FUNCTIONS}}
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_ab8ec6d268bee1e885b648c98abbf41ea}{turnOnSpaces}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_a512515063280595b1e98e4a3924e006f}{reallocSpaces}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00166\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_a0fecd6325c4107e3a844e788b41f42ff}{freeSpaces}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00174\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_space_8h_ac1e7fe29bc3e5030ed759881a480a143}{spaceOccupied}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces,\ \textcolor{keywordtype}{int}\ space\_id);}
+\DoxyCodeLine{00175\ }
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{comment}{//FUNCTIONS\ TO\ OPERATIONS\ CREATE,LIST,UPDATE,DELETE}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00184\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_a5c7bbc6c15c3498f9a91280697ffc27f}{createSpace}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00191\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_a424d937f73cbe85460613b1099ace66b}{listSpace}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00192\ }
+\DoxyCodeLine{00198\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_af88d5839b2d86c0388cc0f3187cd11dc}{updateSpace}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00205\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_a08e15e0f353b9944b97340d4a8810e1c}{deleteSpace}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{comment}{//PROTOTIPS\ REPORTS\ FUCTIONS}}
+\DoxyCodeLine{00213\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_a5da64461cc7aebae484b599149471c55}{totalAvaliableSpaces}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00214\ }
+\DoxyCodeLine{00220\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_space_8h_a6270abf672910ea81d95acc70a916193}{spacesByType}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces);}
+\DoxyCodeLine{00221\ }
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00223\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MENUSPACE\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

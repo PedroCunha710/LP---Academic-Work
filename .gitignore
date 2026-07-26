@@ -1,0 +1,15 @@
+# Build artifacts (NetBeans/Cygwin toolchain)
+build/
+dist/
+*.o
+*.o.d
+*.exe
+
+# NetBeans private project data (machine-specific)
+nbproject/private/
+
+# Data files generated at runtime (binary persistence)
+*.bin
+
+# Logs
+*.log

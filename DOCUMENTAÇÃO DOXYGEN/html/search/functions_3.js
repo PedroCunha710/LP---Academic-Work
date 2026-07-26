@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['findclient_0',['findClient',['../menu_client_8c.html#a74f33d6757e8d84722d6d5ca6dd8780f',1,'findClient(ClientList *list, int id):&#160;menuClient.c'],['../menu_client_8h.html#a74f33d6757e8d84722d6d5ca6dd8780f',1,'findClient(ClientList *list, int id):&#160;menuClient.c']]],
+  ['findequipment_1',['findEquipment',['../menu_equipment_8c.html#a3c8fad3f2ca657ce02b47bd3b74ba06b',1,'findEquipment(equipmentManager *equipments, int id):&#160;menuEquipment.c'],['../menu_equipment_8h.html#a3c8fad3f2ca657ce02b47bd3b74ba06b',1,'findEquipment(equipmentManager *equipments, int id):&#160;menuEquipment.c']]],
+  ['findspace_2',['findSpace',['../menu_booking_8c.html#a4f539b1ce4787290f4e59e17f5dc8704',1,'findSpace(geralSpaces *spaces, int space_id):&#160;menuBooking.c'],['../menu_booking_8h.html#a4f539b1ce4787290f4e59e17f5dc8704',1,'findSpace(geralSpaces *spaces, int space_id):&#160;menuBooking.c']]],
+  ['freeclientlist_3',['freeClientList',['../menu_client_8c.html#a4c4a141a224ee2ae36d484a8c4a12abe',1,'freeClientList(ClientList *list):&#160;menuClient.c'],['../menu_client_8h.html#a4c4a141a224ee2ae36d484a8c4a12abe',1,'freeClientList(ClientList *list):&#160;menuClient.c']]],
+  ['freeequipment_4',['freeEquipment',['../menu_equipment_8c.html#a9078823d5329ed446f95ffcc4decf93d',1,'freeEquipment(equipmentManager *equipments):&#160;menuEquipment.c'],['../menu_equipment_8h.html#a9078823d5329ed446f95ffcc4decf93d',1,'freeEquipment(equipmentManager *equipments):&#160;menuEquipment.c']]],
+  ['freereservationlist_5',['freeReservationList',['../menu_booking_8c.html#a726640c51a53f6ac947230344d34d06b',1,'freeReservationList(ReservationList *list):&#160;menuBooking.c'],['../menu_booking_8h.html#ab983b8a996b43882a6e867b0bbdc3e01',1,'freeReservationList(ReservationList *reservations):&#160;menuBooking.c']]],
+  ['freespaces_6',['freeSpaces',['../menu_space_8c.html#acbaece20d95a301e5ae171f4fa12c3b5',1,'freeSpaces(geralSpaces *space):&#160;menuSpace.c'],['../menu_space_8h.html#a0fecd6325c4107e3a844e788b41f42ff',1,'freeSpaces(geralSpaces *spaces):&#160;menuSpace.c']]]
+];

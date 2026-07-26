@@ -1,0 +1,537 @@
+\doxysection{menu\+Equipment.\+h File Reference}
+\hypertarget{menu_equipment_8h}{}\label{menu_equipment_8h}\index{menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_equipment}{Equipment}}
+\item 
+struct \mbox{\hyperlink{structequipment_manager}{equipment\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_ac7c0207aa5a0e10d378be03b68041350}{MAX\+\_\+\+NAME}}~50
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_aaeeceab4e341647aea67df00552f85b2}{ID\+\_\+\+NOT\+\_\+\+FOUND}}~"{}ID NOT FOUND"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_a3b2c432018ed397179fa3538bc15ec6c}{NOT\+\_\+\+SAVED\+\_\+\+EQUIPMENT}}~"{}NO EQUIPMENT TO SAVE!!"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_a940b6dda5ade3d666c4cfcdc86598067}{NOT\+\_\+\+EQUIPMENT\+\_\+\+SHOW}}~"{}NO EQUIPMENTS TO SHOW!"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_a193c4724891a6abc5ba2eeea7b897603}{NOT\+\_\+\+EQUIPMENT\+\_\+\+UPDATE}}~"{}NO EQUIPMENTS TO UPDATE"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_aff9e5002dbb189baef34cc77c6724688}{NOT\+\_\+\+EQUIPMENT\+\_\+\+DELETE}}~"{}NO EQUIPMENTS TO DELETE!"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_acb637411689a8c113c3fb526c19a6f95}{ERROR\+\_\+\+SAVING\+\_\+\+EQUIPMENT}}~"{}ERROR SAVING EQUIPMENTS!!"{}
+\begin{DoxyCompactList}\small\item\em Message displayed when there is an error saving equipment. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_a8f51b06a2d7e0613efc544e32d0aa3e4}{SAVED\+\_\+\+EQUIPMENT}}~"{}EQUIPMENTS SAVED SUCESSFULLY"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_aa41e7701c0c52cabb0ec02af1fa343a7}{NOT\+\_\+\+LOADED\+\_\+\+EQUIPMENT}}~"{}NO EQUIPMENT FILES FOUND! INICIALIZATING EMPTY LIST"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_ad0b3f7fc9819e0ebbf5b24ea0deec2ec}{ALLOC\+\_\+\+MEMORY\+\_\+\+LOAD}}~"{}ERROR ALLOCATING MEMORY!"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_adbe536cc03820402434afae4bb77b7b7}{LOADED\+\_\+\+EQUIPMENT}}~"{}EQUIPMENTS LOADED SUCESSFULLY"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_ae48a3290b9c6f6e657347b975283b3a8}{TURN\+\_\+\+ON\+\_\+\+EQUIPMENT}}~"{}ERROR ALLOCATING MEMORY FOR EQUIPMENT!"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_a9d65bfb3d53cbe6718ea8502d8070f24}{CREATE\+\_\+\+EQUIPMENT}}~"{}\textbackslash{}n\+EQUIPMENT CREATED SUCESSFULLY!"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_a016f8d0aedb1593fbbcce32292e37d04}{DELETE\+\_\+\+EQUIPMENT}}~"{}EQUIPMENT DELETED SUCESSFULLY!"{}
+\item 
+\#define \mbox{\hyperlink{menu_equipment_8h_a7851c57ec0a8bc5609e01105d6af814b}{UPDATE\+\_\+\+EQUIPMENT}}~"{}EQUIPMENT UPDATED SUCESSFULLY"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00}{equipment\+Type}} \{ \newline
+\mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00abcaf91d1358f76c6286dd2bda3201bca}{AUDIOVISUAL}}
+, \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00ab46092f17e66ed806186292212c2a366}{FURNITURE}}
+, \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a60db0424100dba144bc48de77167ae1c}{LIGHTING}}
+, \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a5e4275ec7c872f3661bc65bee595be56}{SOUND\+\_\+\+SISTEM}}
+, \newline
+\mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a7e16bbd9060844c79f3b30fbef3b629b}{FILMING\+\_\+\+EQUIPMENT}}
+ \}
+\item 
+enum \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a}{equipment\+Status}} \{ \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aa86d911b97d23887456af025cfcfab1e8}{AVALIABLE}}
+, \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aafe4c21755babfece7188666f75c7386b}{RESERVED}}
+, \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aa4bfdb38ec970f04a8ba610e86f00eb4a}{UNDER\+\_\+\+MAINTENANCE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_equipment_8h_a6d6f45336f3ebce3537533a37049e1a3}{turn\+On\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function initializes the equipments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_ab38f224ea4563524bb3c232d3929a2b5}{realloc\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function realloc the equipments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_a9078823d5329ed446f95ffcc4decf93d}{free\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function free the equipments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_a887d7fecd6756fd2a62fe72c6d298dc1}{save\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function saves the record in equipments, for example Create, List, Update and Remove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_a7179be13082ece141a283359fc5d8480}{load\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function load the record in equipments, for example Create, List, Update and Remove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_a3345298a534c51933e91a6f59cd1ac8e}{create\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function create the equipments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_abea9c165c78430b51c69c0f8e8b21174}{list\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function list the equipments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_a6e959c1a3c8e21d370eb6c7b857d3844}{update\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function update the equipments. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_ac510c9266a798a896cc02b58d4a35722}{delete\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function delete the equipments. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_equipment_8h_a3c8fad3f2ca657ce02b47bd3b74ba06b}{find\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments, int id)
+\begin{DoxyCompactList}\small\item\em This function find the equipments. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_equipment_8h_a9453cff0cb712c7eb718019f9fb18f98}{equipment\+Reserved}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments, int equipment\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function search if equipment is reserved. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_aab5d64793a13ba445af5d245b39280a1}{most\+Used\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function show the most used equipment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_ab94578804304fae3bd1301d77fbfd249}{least\+Used\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function show the least used equipment. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{menu_equipment_8h_a00ee1045c7d70d379d1b3de7f5a5c655}{calculate\+Usage\+Rate}} (\mbox{\hyperlink{struct_equipment}{Equipment}} \texorpdfstring{$\ast$}{*}equipment)
+\begin{DoxyCompactList}\small\item\em This function calcilate the usage rate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_equipment_8h_a30a21c8d0b14c3ec797984fdec8b59c5}{detailed\+Usage\+Report}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function show the percentage usage of equipements. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_equipment_8h_ae7f2eb9cde4f539eeb01f0bb6ebc2ac3}{is\+Equipment\+Available}} (\mbox{\hyperlink{struct_equipment}{Equipment}} \texorpdfstring{$\ast$}{*}equipment)
+\begin{DoxyCompactList}\small\item\em This function show if equipment is avaiable.\+If not, cannot be used in reservation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{menu_equipment_8h_ad0b3f7fc9819e0ebbf5b24ea0deec2ec}\index{menuEquipment.h@{menuEquipment.h}!ALLOC\_MEMORY\_LOAD@{ALLOC\_MEMORY\_LOAD}}
+\index{ALLOC\_MEMORY\_LOAD@{ALLOC\_MEMORY\_LOAD}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{ALLOC\_MEMORY\_LOAD}{ALLOC\_MEMORY\_LOAD}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_ad0b3f7fc9819e0ebbf5b24ea0deec2ec} 
+\#define ALLOC\+\_\+\+MEMORY\+\_\+\+LOAD~"{}ERROR ALLOCATING MEMORY!"{}}
+
+Message displayed when there is an error allocating memory to load equipment. \Hypertarget{menu_equipment_8h_a9d65bfb3d53cbe6718ea8502d8070f24}\index{menuEquipment.h@{menuEquipment.h}!CREATE\_EQUIPMENT@{CREATE\_EQUIPMENT}}
+\index{CREATE\_EQUIPMENT@{CREATE\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{CREATE\_EQUIPMENT}{CREATE\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a9d65bfb3d53cbe6718ea8502d8070f24} 
+\#define CREATE\+\_\+\+EQUIPMENT~"{}\textbackslash{}n\+EQUIPMENT CREATED SUCESSFULLY!"{}}
+
+Message displayed when equipment is created successfully. \Hypertarget{menu_equipment_8h_a016f8d0aedb1593fbbcce32292e37d04}\index{menuEquipment.h@{menuEquipment.h}!DELETE\_EQUIPMENT@{DELETE\_EQUIPMENT}}
+\index{DELETE\_EQUIPMENT@{DELETE\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{DELETE\_EQUIPMENT}{DELETE\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a016f8d0aedb1593fbbcce32292e37d04} 
+\#define DELETE\+\_\+\+EQUIPMENT~"{}EQUIPMENT DELETED SUCESSFULLY!"{}}
+
+Message displayed when equipment is deleted successfully. \Hypertarget{menu_equipment_8h_acb637411689a8c113c3fb526c19a6f95}\index{menuEquipment.h@{menuEquipment.h}!ERROR\_SAVING\_EQUIPMENT@{ERROR\_SAVING\_EQUIPMENT}}
+\index{ERROR\_SAVING\_EQUIPMENT@{ERROR\_SAVING\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{ERROR\_SAVING\_EQUIPMENT}{ERROR\_SAVING\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_acb637411689a8c113c3fb526c19a6f95} 
+\#define ERROR\+\_\+\+SAVING\+\_\+\+EQUIPMENT~"{}ERROR SAVING EQUIPMENTS!!"{}}
+
+
+
+Message displayed when there is an error saving equipment. 
+
+\Hypertarget{menu_equipment_8h_aaeeceab4e341647aea67df00552f85b2}\index{menuEquipment.h@{menuEquipment.h}!ID\_NOT\_FOUND@{ID\_NOT\_FOUND}}
+\index{ID\_NOT\_FOUND@{ID\_NOT\_FOUND}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{ID\_NOT\_FOUND}{ID\_NOT\_FOUND}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_aaeeceab4e341647aea67df00552f85b2} 
+\#define ID\+\_\+\+NOT\+\_\+\+FOUND~"{}ID NOT FOUND"{}}
+
+Message displayed when an ID is not found. \Hypertarget{menu_equipment_8h_adbe536cc03820402434afae4bb77b7b7}\index{menuEquipment.h@{menuEquipment.h}!LOADED\_EQUIPMENT@{LOADED\_EQUIPMENT}}
+\index{LOADED\_EQUIPMENT@{LOADED\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{LOADED\_EQUIPMENT}{LOADED\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_adbe536cc03820402434afae4bb77b7b7} 
+\#define LOADED\+\_\+\+EQUIPMENT~"{}EQUIPMENTS LOADED SUCESSFULLY"{}}
+
+Message displayed when equipment is loaded successfully. \Hypertarget{menu_equipment_8h_ac7c0207aa5a0e10d378be03b68041350}\index{menuEquipment.h@{menuEquipment.h}!MAX\_NAME@{MAX\_NAME}}
+\index{MAX\_NAME@{MAX\_NAME}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_NAME}{MAX\_NAME}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_ac7c0207aa5a0e10d378be03b68041350} 
+\#define MAX\+\_\+\+NAME~50}
+
+Maximum length for a equipment name. \Hypertarget{menu_equipment_8h_aff9e5002dbb189baef34cc77c6724688}\index{menuEquipment.h@{menuEquipment.h}!NOT\_EQUIPMENT\_DELETE@{NOT\_EQUIPMENT\_DELETE}}
+\index{NOT\_EQUIPMENT\_DELETE@{NOT\_EQUIPMENT\_DELETE}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_EQUIPMENT\_DELETE}{NOT\_EQUIPMENT\_DELETE}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_aff9e5002dbb189baef34cc77c6724688} 
+\#define NOT\+\_\+\+EQUIPMENT\+\_\+\+DELETE~"{}NO EQUIPMENTS TO DELETE!"{}}
+
+Message displayed when there are no equipment to delete. \Hypertarget{menu_equipment_8h_a940b6dda5ade3d666c4cfcdc86598067}\index{menuEquipment.h@{menuEquipment.h}!NOT\_EQUIPMENT\_SHOW@{NOT\_EQUIPMENT\_SHOW}}
+\index{NOT\_EQUIPMENT\_SHOW@{NOT\_EQUIPMENT\_SHOW}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_EQUIPMENT\_SHOW}{NOT\_EQUIPMENT\_SHOW}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a940b6dda5ade3d666c4cfcdc86598067} 
+\#define NOT\+\_\+\+EQUIPMENT\+\_\+\+SHOW~"{}NO EQUIPMENTS TO SHOW!"{}}
+
+Message displayed when there are no equipment to show. \Hypertarget{menu_equipment_8h_a193c4724891a6abc5ba2eeea7b897603}\index{menuEquipment.h@{menuEquipment.h}!NOT\_EQUIPMENT\_UPDATE@{NOT\_EQUIPMENT\_UPDATE}}
+\index{NOT\_EQUIPMENT\_UPDATE@{NOT\_EQUIPMENT\_UPDATE}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_EQUIPMENT\_UPDATE}{NOT\_EQUIPMENT\_UPDATE}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a193c4724891a6abc5ba2eeea7b897603} 
+\#define NOT\+\_\+\+EQUIPMENT\+\_\+\+UPDATE~"{}NO EQUIPMENTS TO UPDATE"{}}
+
+Message displayed when there are no equipment to update. \Hypertarget{menu_equipment_8h_aa41e7701c0c52cabb0ec02af1fa343a7}\index{menuEquipment.h@{menuEquipment.h}!NOT\_LOADED\_EQUIPMENT@{NOT\_LOADED\_EQUIPMENT}}
+\index{NOT\_LOADED\_EQUIPMENT@{NOT\_LOADED\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_LOADED\_EQUIPMENT}{NOT\_LOADED\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_aa41e7701c0c52cabb0ec02af1fa343a7} 
+\#define NOT\+\_\+\+LOADED\+\_\+\+EQUIPMENT~"{}NO EQUIPMENT FILES FOUND! INICIALIZATING EMPTY LIST"{}}
+
+Message displayed when no equipment files are found. \Hypertarget{menu_equipment_8h_a3b2c432018ed397179fa3538bc15ec6c}\index{menuEquipment.h@{menuEquipment.h}!NOT\_SAVED\_EQUIPMENT@{NOT\_SAVED\_EQUIPMENT}}
+\index{NOT\_SAVED\_EQUIPMENT@{NOT\_SAVED\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{NOT\_SAVED\_EQUIPMENT}{NOT\_SAVED\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a3b2c432018ed397179fa3538bc15ec6c} 
+\#define NOT\+\_\+\+SAVED\+\_\+\+EQUIPMENT~"{}NO EQUIPMENT TO SAVE!!"{}}
+
+Message displayed when there are no equipment to save. \Hypertarget{menu_equipment_8h_a8f51b06a2d7e0613efc544e32d0aa3e4}\index{menuEquipment.h@{menuEquipment.h}!SAVED\_EQUIPMENT@{SAVED\_EQUIPMENT}}
+\index{SAVED\_EQUIPMENT@{SAVED\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{SAVED\_EQUIPMENT}{SAVED\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a8f51b06a2d7e0613efc544e32d0aa3e4} 
+\#define SAVED\+\_\+\+EQUIPMENT~"{}EQUIPMENTS SAVED SUCESSFULLY"{}}
+
+Message displayed when equipment is saved successfully. \Hypertarget{menu_equipment_8h_ae48a3290b9c6f6e657347b975283b3a8}\index{menuEquipment.h@{menuEquipment.h}!TURN\_ON\_EQUIPMENT@{TURN\_ON\_EQUIPMENT}}
+\index{TURN\_ON\_EQUIPMENT@{TURN\_ON\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{TURN\_ON\_EQUIPMENT}{TURN\_ON\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_ae48a3290b9c6f6e657347b975283b3a8} 
+\#define TURN\+\_\+\+ON\+\_\+\+EQUIPMENT~"{}ERROR ALLOCATING MEMORY FOR EQUIPMENT!"{}}
+
+Message displayed when there is an error turning on the equipment. \Hypertarget{menu_equipment_8h_a7851c57ec0a8bc5609e01105d6af814b}\index{menuEquipment.h@{menuEquipment.h}!UPDATE\_EQUIPMENT@{UPDATE\_EQUIPMENT}}
+\index{UPDATE\_EQUIPMENT@{UPDATE\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{UPDATE\_EQUIPMENT}{UPDATE\_EQUIPMENT}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a7851c57ec0a8bc5609e01105d6af814b} 
+\#define UPDATE\+\_\+\+EQUIPMENT~"{}EQUIPMENT UPDATED SUCESSFULLY"{}}
+
+Message displayed when equipment is updated successfully. 
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a}\index{menuEquipment.h@{menuEquipment.h}!equipmentStatus@{equipmentStatus}}
+\index{equipmentStatus@{equipmentStatus}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{equipmentStatus}{equipmentStatus}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a} 
+enum \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a}{equipment\+Status}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AVALIABLE@{AVALIABLE}!menuEquipment.h@{menuEquipment.h}}\index{menuEquipment.h@{menuEquipment.h}!AVALIABLE@{AVALIABLE}}}\Hypertarget{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aa86d911b97d23887456af025cfcfab1e8}\label{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a} 
+AVALIABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RESERVED@{RESERVED}!menuEquipment.h@{menuEquipment.h}}\index{menuEquipment.h@{menuEquipment.h}!RESERVED@{RESERVED}}}\Hypertarget{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aafe4c21755babfece7188666f75c7386b}\label{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a} 
+RESERVED&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UNDER\_MAINTENANCE@{UNDER\_MAINTENANCE}!menuEquipment.h@{menuEquipment.h}}\index{menuEquipment.h@{menuEquipment.h}!UNDER\_MAINTENANCE@{UNDER\_MAINTENANCE}}}\Hypertarget{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aa4bfdb38ec970f04a8ba610e86f00eb4a}\label{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a} 
+UNDER\+\_\+\+MAINTENANCE&\\
+\hline
+
+\end{DoxyEnumFields}
+\Hypertarget{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00}\index{menuEquipment.h@{menuEquipment.h}!equipmentType@{equipmentType}}
+\index{equipmentType@{equipmentType}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{equipmentType}{equipmentType}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00} 
+enum \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00}{equipment\+Type}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AUDIOVISUAL@{AUDIOVISUAL}!menuEquipment.h@{menuEquipment.h}}\index{menuEquipment.h@{menuEquipment.h}!AUDIOVISUAL@{AUDIOVISUAL}}}\Hypertarget{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00abcaf91d1358f76c6286dd2bda3201bca}\label{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00} 
+AUDIOVISUAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FURNITURE@{FURNITURE}!menuEquipment.h@{menuEquipment.h}}\index{menuEquipment.h@{menuEquipment.h}!FURNITURE@{FURNITURE}}}\Hypertarget{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00ab46092f17e66ed806186292212c2a366}\label{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00} 
+FURNITURE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LIGHTING@{LIGHTING}!menuEquipment.h@{menuEquipment.h}}\index{menuEquipment.h@{menuEquipment.h}!LIGHTING@{LIGHTING}}}\Hypertarget{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a60db0424100dba144bc48de77167ae1c}\label{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00} 
+LIGHTING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOUND\_SISTEM@{SOUND\_SISTEM}!menuEquipment.h@{menuEquipment.h}}\index{menuEquipment.h@{menuEquipment.h}!SOUND\_SISTEM@{SOUND\_SISTEM}}}\Hypertarget{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a5e4275ec7c872f3661bc65bee595be56}\label{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00} 
+SOUND\+\_\+\+SISTEM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILMING\_EQUIPMENT@{FILMING\_EQUIPMENT}!menuEquipment.h@{menuEquipment.h}}\index{menuEquipment.h@{menuEquipment.h}!FILMING\_EQUIPMENT@{FILMING\_EQUIPMENT}}}\Hypertarget{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a7e16bbd9060844c79f3b30fbef3b629b}\label{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00} 
+FILMING\+\_\+\+EQUIPMENT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_equipment_8h_a00ee1045c7d70d379d1b3de7f5a5c655}\index{menuEquipment.h@{menuEquipment.h}!calculateUsageRate@{calculateUsageRate}}
+\index{calculateUsageRate@{calculateUsageRate}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{calculateUsageRate()}{calculateUsageRate()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a00ee1045c7d70d379d1b3de7f5a5c655} 
+float calculate\+Usage\+Rate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_equipment}{Equipment}} \texorpdfstring{$\ast$}{*}}]{equipment}{}\end{DoxyParamCaption})}
+
+
+
+This function calcilate the usage rate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_equipment}{Equipment}} & are used to send the adress of the mains variables "{}equipment"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function return the value of the usage rate. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a3345298a534c51933e91a6f59cd1ac8e}\index{menuEquipment.h@{menuEquipment.h}!createEquipment@{createEquipment}}
+\index{createEquipment@{createEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{createEquipment()}{createEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a3345298a534c51933e91a6f59cd1ac8e} 
+void create\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function create the equipments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just create the equipments. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_ac510c9266a798a896cc02b58d4a35722}\index{menuEquipment.h@{menuEquipment.h}!deleteEquipment@{deleteEquipment}}
+\index{deleteEquipment@{deleteEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{deleteEquipment()}{deleteEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_ac510c9266a798a896cc02b58d4a35722} 
+void delete\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function delete the equipments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just delete the equipments. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a30a21c8d0b14c3ec797984fdec8b59c5}\index{menuEquipment.h@{menuEquipment.h}!detailedUsageReport@{detailedUsageReport}}
+\index{detailedUsageReport@{detailedUsageReport}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{detailedUsageReport()}{detailedUsageReport()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a30a21c8d0b14c3ec797984fdec8b59c5} 
+void detailed\+Usage\+Report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function show the percentage usage of equipements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the percentage usage of equipement. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a9453cff0cb712c7eb718019f9fb18f98}\index{menuEquipment.h@{menuEquipment.h}!equipmentReserved@{equipmentReserved}}
+\index{equipmentReserved@{equipmentReserved}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{equipmentReserved()}{equipmentReserved()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a9453cff0cb712c7eb718019f9fb18f98} 
+int equipment\+Reserved (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{, }\item[{int}]{equipment\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+This function search if equipment is reserved. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+{\em equipment\+\_\+id} & show if equipment is reserved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does return to the equipment\+\_\+id if equipment is reserved or 0 if equipment is avaiable. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a3c8fad3f2ca657ce02b47bd3b74ba06b}\index{menuEquipment.h@{menuEquipment.h}!findEquipment@{findEquipment}}
+\index{findEquipment@{findEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{findEquipment()}{findEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a3c8fad3f2ca657ce02b47bd3b74ba06b} 
+int find\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+This function find the equipments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+{\em id} & is used to find the id of the equipment \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function return the id of equipment if id is found or 0 if the id is not found. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a9078823d5329ed446f95ffcc4decf93d}\index{menuEquipment.h@{menuEquipment.h}!freeEquipment@{freeEquipment}}
+\index{freeEquipment@{freeEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{freeEquipment()}{freeEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a9078823d5329ed446f95ffcc4decf93d} 
+void free\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function free the equipments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just free the equipments. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_ae7f2eb9cde4f539eeb01f0bb6ebc2ac3}\index{menuEquipment.h@{menuEquipment.h}!isEquipmentAvailable@{isEquipmentAvailable}}
+\index{isEquipmentAvailable@{isEquipmentAvailable}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{isEquipmentAvailable()}{isEquipmentAvailable()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_ae7f2eb9cde4f539eeb01f0bb6ebc2ac3} 
+int is\+Equipment\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_equipment}{Equipment}} \texorpdfstring{$\ast$}{*}}]{equipment}{}\end{DoxyParamCaption})}
+
+
+
+This function show if equipment is avaiable.\+If not, cannot be used in reservation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_equipment}{Equipment}} & are used to send the adress of the mains variables "{}equipment"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function return 1 if equipment is avaiable or 0 if equipment is maintenance. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_ab94578804304fae3bd1301d77fbfd249}\index{menuEquipment.h@{menuEquipment.h}!leastUsedEquipment@{leastUsedEquipment}}
+\index{leastUsedEquipment@{leastUsedEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{leastUsedEquipment()}{leastUsedEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_ab94578804304fae3bd1301d77fbfd249} 
+void least\+Used\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function show the least used equipment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the least used equipment. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_abea9c165c78430b51c69c0f8e8b21174}\index{menuEquipment.h@{menuEquipment.h}!listEquipment@{listEquipment}}
+\index{listEquipment@{listEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{listEquipment()}{listEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_abea9c165c78430b51c69c0f8e8b21174} 
+void list\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function list the equipments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just list the equipments. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a7179be13082ece141a283359fc5d8480}\index{menuEquipment.h@{menuEquipment.h}!loadEquipment@{loadEquipment}}
+\index{loadEquipment@{loadEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{loadEquipment()}{loadEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a7179be13082ece141a283359fc5d8480} 
+void load\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function load the record in equipments, for example Create, List, Update and Remove. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Its only load the equipments. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_aab5d64793a13ba445af5d245b39280a1}\index{menuEquipment.h@{menuEquipment.h}!mostUsedEquipment@{mostUsedEquipment}}
+\index{mostUsedEquipment@{mostUsedEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{mostUsedEquipment()}{mostUsedEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_aab5d64793a13ba445af5d245b39280a1} 
+void most\+Used\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function show the most used equipment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the most used equipment. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_ab38f224ea4563524bb3c232d3929a2b5}\index{menuEquipment.h@{menuEquipment.h}!reallocEquipment@{reallocEquipment}}
+\index{reallocEquipment@{reallocEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{reallocEquipment()}{reallocEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_ab38f224ea4563524bb3c232d3929a2b5} 
+void realloc\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function realloc the equipments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just realloc the equipments. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a887d7fecd6756fd2a62fe72c6d298dc1}\index{menuEquipment.h@{menuEquipment.h}!saveEquipment@{saveEquipment}}
+\index{saveEquipment@{saveEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{saveEquipment()}{saveEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a887d7fecd6756fd2a62fe72c6d298dc1} 
+void save\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function saves the record in equipments, for example Create, List, Update and Remove. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Its only save the equipments. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a6d6f45336f3ebce3537533a37049e1a3}\index{menuEquipment.h@{menuEquipment.h}!turnOnEquipment@{turnOnEquipment}}
+\index{turnOnEquipment@{turnOnEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{turnOnEquipment()}{turnOnEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a6d6f45336f3ebce3537533a37049e1a3} 
+void turn\+On\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function initializes the equipments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just inicialize the equipments. 
+\end{DoxyReturn}
+\Hypertarget{menu_equipment_8h_a6e959c1a3c8e21d370eb6c7b857d3844}\index{menuEquipment.h@{menuEquipment.h}!updateEquipment@{updateEquipment}}
+\index{updateEquipment@{updateEquipment}!menuEquipment.h@{menuEquipment.h}}
+\doxysubsubsection{\texorpdfstring{updateEquipment()}{updateEquipment()}}
+{\footnotesize\ttfamily \label{menu_equipment_8h_a6e959c1a3c8e21d370eb6c7b857d3844} 
+void update\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function update the equipments. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just update the equipments. 
+\end{DoxyReturn}

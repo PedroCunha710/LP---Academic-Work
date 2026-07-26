@@ -1,0 +1,119 @@
+\doxysection{input.\+c File Reference}
+\hypertarget{input_8c}{}\label{input_8c}\index{input.c@{input.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}input.\+h"{}}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{input_8c_a750be53afe22b006b8b36b42f3c12323}{clean\+Buffer}} ()
+\begin{DoxyCompactList}\small\item\em Clears the input buffer to remove any leftover characters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{input_8c_ad398244fc4fa0068920fa93b87000fe3}{verify}} (int min\+Val, int max\+Val, char \texorpdfstring{$\ast$}{*}mensage)
+\begin{DoxyCompactList}\small\item\em Verifies whether the input value is within a specified range. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{input_8c_ac40c8a56031fa2a1f688772766e6c725}{read\+Strg}} (char \texorpdfstring{$\ast$}{*}strg, unsigned int sz, char \texorpdfstring{$\ast$}{*}mensage)
+\begin{DoxyCompactList}\small\item\em Reads a string from the user with a maximum specified length. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{input_8c_a9712682e96d84cdf63cefc7bf116ee2a}{regist\+Day}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current date from the system and returns the day of the month. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{input_8c_a9bfeac8a756d0a60b35606077e3b926e}{regist\+Month}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current date from system and returns the month of the year. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{input_8c_a572ef9f8b316fd90c44e0c444c19b144}{regist\+Year}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current date from system and returns the year. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{input_8c_a750be53afe22b006b8b36b42f3c12323}\index{input.c@{input.c}!cleanBuffer@{cleanBuffer}}
+\index{cleanBuffer@{cleanBuffer}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{cleanBuffer()}{cleanBuffer()}}
+{\footnotesize\ttfamily \label{input_8c_a750be53afe22b006b8b36b42f3c12323} 
+void clean\+Buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Clears the input buffer to remove any leftover characters. 
+
+This function is used to flush the input buffer, clearing any extraneous characters or newline characters left behind by previous user inputs. It ensures that the buffer is clean before accepting new input, preventing issues when reading input later. \Hypertarget{input_8c_ac40c8a56031fa2a1f688772766e6c725}\index{input.c@{input.c}!readStrg@{readStrg}}
+\index{readStrg@{readStrg}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{readStrg()}{readStrg()}}
+{\footnotesize\ttfamily \label{input_8c_ac40c8a56031fa2a1f688772766e6c725} 
+void read\+Strg (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{strg}{, }\item[{unsigned int}]{sz}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{mensage}{}\end{DoxyParamCaption})}
+
+
+
+Reads a string from the user with a maximum specified length. 
+
+This function prompts the user for input and stores the entered string in the provided {\ttfamily strg} buffer. The string is read up to the specified size {\ttfamily sz} to prevent buffer overflow. This function ensures that the entered string is properly terminated and that no characters beyond the buffer size are read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em strg} & The buffer where the input string will be stored. \\
+\hline
+{\em sz} & The size of the string buffer, which limits how many characters can be read. \\
+\hline
+{\em mensage} & The message displayed to the user prompting for the input. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{input_8c_a9712682e96d84cdf63cefc7bf116ee2a}\index{input.c@{input.c}!registDay@{registDay}}
+\index{registDay@{registDay}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{registDay()}{registDay()}}
+{\footnotesize\ttfamily \label{input_8c_a9712682e96d84cdf63cefc7bf116ee2a} 
+int regist\+Day (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current date from the system and returns the day of the month. 
+
+\begin{DoxyReturn}{Returns}
+The day of the month. 
+\end{DoxyReturn}
+\Hypertarget{input_8c_a9bfeac8a756d0a60b35606077e3b926e}\index{input.c@{input.c}!registMonth@{registMonth}}
+\index{registMonth@{registMonth}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{registMonth()}{registMonth()}}
+{\footnotesize\ttfamily \label{input_8c_a9bfeac8a756d0a60b35606077e3b926e} 
+int regist\+Month (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current date from system and returns the month of the year. 
+
+\begin{DoxyReturn}{Returns}
+The month of the year. 
+\end{DoxyReturn}
+\Hypertarget{input_8c_a572ef9f8b316fd90c44e0c444c19b144}\index{input.c@{input.c}!registYear@{registYear}}
+\index{registYear@{registYear}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{registYear()}{registYear()}}
+{\footnotesize\ttfamily \label{input_8c_a572ef9f8b316fd90c44e0c444c19b144} 
+int regist\+Year (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current date from system and returns the year. 
+
+\begin{DoxyReturn}{Returns}
+The year. 
+\end{DoxyReturn}
+\Hypertarget{input_8c_ad398244fc4fa0068920fa93b87000fe3}\index{input.c@{input.c}!verify@{verify}}
+\index{verify@{verify}!input.c@{input.c}}
+\doxysubsubsection{\texorpdfstring{verify()}{verify()}}
+{\footnotesize\ttfamily \label{input_8c_ad398244fc4fa0068920fa93b87000fe3} 
+int verify (\begin{DoxyParamCaption}\item[{int}]{min\+Val}{, }\item[{int}]{max\+Val}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{mensage}{}\end{DoxyParamCaption})}
+
+
+
+Verifies whether the input value is within a specified range. 
+
+This function prompts the user to enter a value and checks if it falls within a specified range defined by the {\ttfamily min\+Val} and {\ttfamily max\+Val} parameters. If the user enters a value outside of this range, the function will display an error message and prompt the user to try again until a valid value is provided.
+
+
+\begin{DoxyParams}{Parameters}
+{\em min\+Val} & The minimum acceptable value for the input. \\
+\hline
+{\em max\+Val} & The maximum acceptable value for the input. \\
+\hline
+{\em mensage} & The message to display when asking for the input.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The valid integer input provided by the user, which is guaranteed to be within the specified range. 
+\end{DoxyReturn}

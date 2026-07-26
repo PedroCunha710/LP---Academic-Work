@@ -1,0 +1,125 @@
+\doxysection{menu\+Equipment.\+h}
+\hypertarget{menu_equipment_8h_source}{}\label{menu_equipment_8h_source}\mbox{\hyperlink{menu_equipment_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ @File:\ \ \ menuEquipment.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ @Author:\ Pedro\ Cunha\ }}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Created\ on\ 20\ de\ dezembro\ de\ 2024,\ 13:54}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ *\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ @brief\ In\ this\ header\ file\ we\ will\ declare\ the\ functions\ of\ the\ equipment\ to\ use\ in\ other\ pages.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ This\ file\ contains\ the\ functions\ of\ the\ equipments\ to\ use\ in\ other\ pages.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MENUEQUIPMENT\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MENUEQUIPMENT\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ MAX\_NAME\ 50}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ ID\_NOT\_FOUND\ "{}ID\ NOT\ FOUND"{}}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ NOT\_SAVED\_EQUIPMENT\ "{}NO\ EQUIPMENT\ TO\ SAVE!!"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ NOT\_EQUIPMENT\_SHOW\ "{}NO\ EQUIPMENTS\ TO\ SHOW!"{}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ NOT\_EQUIPMENT\_UPDATE\ "{}NO\ EQUIPMENTS\ TO\ UPDATE"{}}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ NOT\_EQUIPMENT\_DELETE\ "{}NO\ EQUIPMENTS\ TO\ DELETE!"{}}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ ERROR\_SAVING\_EQUIPMENT\ "{}ERROR\ SAVING\ EQUIPMENTS!!"{}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ SAVED\_EQUIPMENT\ "{}EQUIPMENTS\ SAVED\ SUCESSFULLY"{}}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ NOT\_LOADED\_EQUIPMENT\ "{}NO\ EQUIPMENT\ FILES\ FOUND!\ INICIALIZATING\ EMPTY\ LIST"{}}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ ALLOC\_MEMORY\_LOAD\ "{}ERROR\ ALLOCATING\ MEMORY!"{}}}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ LOADED\_EQUIPMENT\ "{}EQUIPMENTS\ LOADED\ SUCESSFULLY"{}}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ TURN\_ON\_EQUIPMENT\ "{}ERROR\ ALLOCATING\ MEMORY\ FOR\ EQUIPMENT!"{}}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ CREATE\_EQUIPMENT\ "{}\(\backslash\)nEQUIPMENT\ CREATED\ SUCESSFULLY!"{}}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ DELETE\_EQUIPMENT\ "{}EQUIPMENT\ DELETED\ SUCESSFULLY!"{}}}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \textcolor{preprocessor}{\#define\ UPDATE\_EQUIPMENT\ "{}EQUIPMENT\ UPDATED\ SUCESSFULLY"{}}}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{comment}{//ENUMS}}
+\DoxyCodeLine{00100\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00101\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00abcaf91d1358f76c6286dd2bda3201bca}{AUDIOVISUAL}},}
+\DoxyCodeLine{00102\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00ab46092f17e66ed806186292212c2a366}{FURNITURE}},}
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a60db0424100dba144bc48de77167ae1c}{LIGHTING}},}
+\DoxyCodeLine{00104\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a5e4275ec7c872f3661bc65bee595be56}{SOUND\_SISTEM}},}
+\DoxyCodeLine{00105\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00a7e16bbd9060844c79f3b30fbef3b629b}{FILMING\_EQUIPMENT}},}
+\DoxyCodeLine{00106\ \}\mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00}{equipmentType}};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{comment}{//TYPES\ OF\ EQUIPMENT}}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aa86d911b97d23887456af025cfcfab1e8}{AVALIABLE}},}
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aafe4c21755babfece7188666f75c7386b}{RESERVED}},}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836aa4bfdb38ec970f04a8ba610e86f00eb4a}{UNDER\_MAINTENANCE}}\ \ \ \ \ \ \ }
+\DoxyCodeLine{00114\ \}\mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a}{equipmentStatus}};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \textcolor{comment}{//STATUS\ OF\ EQUIPMENT}}
+\DoxyCodeLine{00117\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_equipment_a7441ef0865bcb3db9b8064dd7375c1ea}{id}};}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{char}\ name[\mbox{\hyperlink{menu_equipment_8h_ac7c0207aa5a0e10d378be03b68041350}{MAX\_NAME}}];}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_equipment_ae6969e17e31c17a28dbf801f91acacfb}{quantity}};}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_equipment_a4bedbbd861a82299ac59df982c104bac}{equipmentReserved}};}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_equipment_abccb17f4474eb1f3a5e4aa3e2634a1d2}{usingEquipment}};}
+\DoxyCodeLine{00123\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_ab6cb4a7657115dff3c117e7dc8cb7f00}{equipmentType}}\ \mbox{\hyperlink{struct_equipment_a843e208e697071caff74e6afd958f0d9}{type}};}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{menu_equipment_8h_a12a7b89b7d5398b86b1b74e0782e836a}{equipmentStatus}}\ \mbox{\hyperlink{struct_equipment_a526f1b41fe1a4d6bbc76f361f2262a02}{status}};}
+\DoxyCodeLine{00125\ \}\mbox{\hyperlink{struct_equipment}{Equipment}};}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00127\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structequipment_manager_a617a47c70795bcff659815ad0efd2266}{counter}};}
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structequipment_manager_adbe66a087ac3fd4a5b0566f64ca2d12b}{capacity}};}
+\DoxyCodeLine{00130\ \ \ \ \ \mbox{\hyperlink{struct_equipment}{Equipment}}\ *\mbox{\hyperlink{structequipment_manager_a6460a0693cca236478afcd54c17ab47b}{equipmentList}};}
+\DoxyCodeLine{00131\ \}\mbox{\hyperlink{structequipment_manager}{equipmentManager}};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{comment}{//FUNCTIONS}}
+\DoxyCodeLine{00139\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_a6d6f45336f3ebce3537533a37049e1a3}{turnOnEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//INCIALIZE\ EQUIPMENTS}}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00146\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_ab38f224ea4563524bb3c232d3929a2b5}{reallocEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//REALLOC\ EQUIPMENTS\ DINAMIC\ MEMORY\ }}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00153\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_a9078823d5329ed446f95ffcc4decf93d}{freeEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//FREE\ EQUIPMENT\ DINAMIC\ MEMORY}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \textcolor{comment}{//FUNCTIONS\ FILES\ (SAVE\ AND\ LOAD)//}}
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_a887d7fecd6756fd2a62fe72c6d298dc1}{saveEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//SAVE\ EQUIPMENT\ IN\ EQUIPMENT.BIN}}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00168\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_a7179be13082ece141a283359fc5d8480}{loadEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//LOAD\ EQUIPMENT\ (FILE\ equipment.bin)}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{comment}{//FUNCTIONS\ CRUD\ (CREATE,READ,UPDATE,DELETE)//}}
+\DoxyCodeLine{00176\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_a3345298a534c51933e91a6f59cd1ac8e}{createEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//FUNCTION\ TO\ CREATE\ EQUIPMENT}}
+\DoxyCodeLine{00177\ }
+\DoxyCodeLine{00183\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_abea9c165c78430b51c69c0f8e8b21174}{listEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//FUNCTION\ TO\ SEARCH/LIST\ EQUIPMENT}}
+\DoxyCodeLine{00184\ }
+\DoxyCodeLine{00190\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_a6e959c1a3c8e21d370eb6c7b857d3844}{updateEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//FUNCTION\ TO\ UPDATE\ EQUIPMENT}}
+\DoxyCodeLine{00191\ }
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_ac510c9266a798a896cc02b58d4a35722}{deleteEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//FUNCTION\ TO\ DELETE\ EQUIPMENT}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00205\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_equipment_8h_a3c8fad3f2ca657ce02b47bd3b74ba06b}{findEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00213\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_equipment_8h_a9453cff0cb712c7eb718019f9fb18f98}{equipmentReserved}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments,\ \textcolor{keywordtype}{int}\ equipment\_id);}
+\DoxyCodeLine{00214\ \textcolor{comment}{//REPORT\ EQUIPMENT\ FUNCTIONS}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00221\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_aab5d64793a13ba445af5d245b39280a1}{mostUsedEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//SHOW\ THE\ MOST\ USED\ EQUIPMENT}}
+\DoxyCodeLine{00222\ }
+\DoxyCodeLine{00228\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_ab94578804304fae3bd1301d77fbfd249}{leastUsedEquipment}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);\ \textcolor{comment}{//SHOW\ THE\ LEAST\ USED\ EQUIPMENT}}
+\DoxyCodeLine{00229\ }
+\DoxyCodeLine{00235\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{menu_equipment_8h_a00ee1045c7d70d379d1b3de7f5a5c655}{calculateUsageRate}}(\mbox{\hyperlink{struct_equipment}{Equipment}}\ *equipment);}
+\DoxyCodeLine{00236\ }
+\DoxyCodeLine{00237\ }
+\DoxyCodeLine{00243\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_equipment_8h_a30a21c8d0b14c3ec797984fdec8b59c5}{detailedUsageReport}}(\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);}
+\DoxyCodeLine{00244\ }
+\DoxyCodeLine{00245\ }
+\DoxyCodeLine{00251\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_equipment_8h_ae7f2eb9cde4f539eeb01f0bb6ebc2ac3}{isEquipmentAvailable}}(\mbox{\hyperlink{struct_equipment}{Equipment}}\ *equipment);}
+\DoxyCodeLine{00252\ }
+\DoxyCodeLine{00253\ }
+\DoxyCodeLine{00254\ }
+\DoxyCodeLine{00255\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MENUEQUIPMENT\_H\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{00256\ }
+
+\end{DoxyCode}

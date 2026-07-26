@@ -1,0 +1,195 @@
+\doxysection{menus.\+h File Reference}
+\hypertarget{menus_8h}{}\label{menus_8h}\index{menus.h@{menus.h}}
+{\ttfamily \#include "{}input.\+h"{}}\newline
+{\ttfamily \#include "{}menu\+Space.\+h"{}}\newline
+{\ttfamily \#include "{}menu\+Equipment.\+h"{}}\newline
+{\ttfamily \#include "{}menu\+Client.\+h"{}}\newline
+{\ttfamily \#include "{}menu\+Booking.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menus_8h_acff3e0dc3d10dad5810ec16198c0a9b2}{menu\+Space}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in menu space. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_a49d3d653bb1cf8bb0b7a1f3685d4cab1}{menu\+Space2}} (\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in menu space(\+Menu Reports). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_a51a9b347fc08533d7b68eb86241ca100}{menu\+Equipment}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in menu equipment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_aac2a406a4dda28cc2f2a979a6db75237}{menu\+Equipment2}} (\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments)
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in menu equipment(\+Menu Reports). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_a90274ecd24a01c209759b8318c2cfe7a}{menu\+Client}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}clients, \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in menu client. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_af136195e99fad44aa4129b06dd8abbf2}{menu\+Client2}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}clients, \mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations)
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in menu client(\+Menu Reports). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_a4f4a3dfc94aa1724bc0e1d8afb0fb25b}{menu\+Reservations}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}reservations, \mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}spaces, \mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}clients, \mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}equipments, int reservation\+\_\+id)
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in menu reservations. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_ab35fc77124d9c726798cb44a60dc0d8e}{menu\+Reservation\+Reports}} (\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in menu reservations(\+Menu Reports). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menus_8h_ab3002fe8e0074c9e2ecb5b835e5e819f}{main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em This function shows the options to the user choose in main menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menus_8h_ab3002fe8e0074c9e2ecb5b835e5e819f}\index{menus.h@{menus.h}!mainMenu@{mainMenu}}
+\index{mainMenu@{mainMenu}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
+{\footnotesize\ttfamily \label{menus_8h_ab3002fe8e0074c9e2ecb5b835e5e819f} 
+void main\+Menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in main menu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em This} & menu shows only the menu of \doxylink{struct_space}{Space},\doxylink{struct_client}{Client},\doxylink{struct_reservation}{Reservation} and \doxylink{struct_equipment}{Equipment} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}
+\Hypertarget{menus_8h_a90274ecd24a01c209759b8318c2cfe7a}\index{menus.h@{menus.h}!menuClient@{menuClient}}
+\index{menuClient@{menuClient}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{menuClient()}{menuClient()}}
+{\footnotesize\ttfamily \label{menus_8h_a90274ecd24a01c209759b8318c2cfe7a} 
+void menu\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{clients}{, }\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in menu client. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & and \doxylink{struct_reservation_list}{Reservation\+List} is used to send the adress of the mains variables "{}clients"{} and "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}
+\Hypertarget{menus_8h_af136195e99fad44aa4129b06dd8abbf2}\index{menus.h@{menus.h}!menuClient2@{menuClient2}}
+\index{menuClient2@{menuClient2}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{menuClient2()}{menuClient2()}}
+{\footnotesize\ttfamily \label{menus_8h_af136195e99fad44aa4129b06dd8abbf2} 
+void menu\+Client2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{clients}{, }\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in menu client(\+Menu Reports). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & and \doxylink{struct_reservation_list}{Reservation\+List} is used to send the adress of the mains variables "{}clients"{} and "{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}
+\Hypertarget{menus_8h_a51a9b347fc08533d7b68eb86241ca100}\index{menus.h@{menus.h}!menuEquipment@{menuEquipment}}
+\index{menuEquipment@{menuEquipment}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{menuEquipment()}{menuEquipment()}}
+{\footnotesize\ttfamily \label{menus_8h_a51a9b347fc08533d7b68eb86241ca100} 
+void menu\+Equipment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in menu equipment. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & is used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}
+\Hypertarget{menus_8h_aac2a406a4dda28cc2f2a979a6db75237}\index{menus.h@{menus.h}!menuEquipment2@{menuEquipment2}}
+\index{menuEquipment2@{menuEquipment2}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{menuEquipment2()}{menuEquipment2()}}
+{\footnotesize\ttfamily \label{menus_8h_aac2a406a4dda28cc2f2a979a6db75237} 
+void menu\+Equipment2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in menu equipment(\+Menu Reports). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structequipment_manager}{equipment\+Manager}} & is used to send the adress of the mains variables "{}equipments"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}
+\Hypertarget{menus_8h_ab35fc77124d9c726798cb44a60dc0d8e}\index{menus.h@{menus.h}!menuReservationReports@{menuReservationReports}}
+\index{menuReservationReports@{menuReservationReports}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{menuReservationReports()}{menuReservationReports()}}
+{\footnotesize\ttfamily \label{menus_8h_ab35fc77124d9c726798cb44a60dc0d8e} 
+void menu\+Reservation\+Reports (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in menu reservations(\+Menu Reports). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List},\doxylink{structgeral_spaces}{geral\+Spaces},\doxylink{struct_client_list}{Client\+List},\doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}reservations"{},"{}spaces"{},clients"{},"{}equipments to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}
+\Hypertarget{menus_8h_a4f4a3dfc94aa1724bc0e1d8afb0fb25b}\index{menus.h@{menus.h}!menuReservations@{menuReservations}}
+\index{menuReservations@{menuReservations}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{menuReservations()}{menuReservations()}}
+{\footnotesize\ttfamily \label{menus_8h_a4f4a3dfc94aa1724bc0e1d8afb0fb25b} 
+void menu\+Reservations (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{, }\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{clients}{, }\item[{\mbox{\hyperlink{structequipment_manager}{equipment\+Manager}} \texorpdfstring{$\ast$}{*}}]{equipments}{, }\item[{int}]{reservation\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in menu reservations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_reservation_list}{Reservation\+List},\doxylink{structgeral_spaces}{geral\+Spaces},\doxylink{struct_client_list}{Client\+List},\doxylink{structequipment_manager}{equipment\+Manager}} & are used to send the adress of the mains variables "{}reservations"{},"{}spaces"{},clients"{},"{}equipments to the following functions. \\
+\hline
+{\em reservation\+\_\+id} & The reservation id valid integer value. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}
+\Hypertarget{menus_8h_acff3e0dc3d10dad5810ec16198c0a9b2}\index{menus.h@{menus.h}!menuSpace@{menuSpace}}
+\index{menuSpace@{menuSpace}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{menuSpace()}{menuSpace()}}
+{\footnotesize\ttfamily \label{menus_8h_acff3e0dc3d10dad5810ec16198c0a9b2} 
+void menu\+Space (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in menu space. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & and \doxylink{struct_reservation_list}{Reservation\+List} is used to send the adress of the mains variables "{}spaces"{},"{}reservations"{} to the following functions. The last one is used to the next menu for the reports. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}
+\Hypertarget{menus_8h_a49d3d653bb1cf8bb0b7a1f3685d4cab1}\index{menus.h@{menus.h}!menuSpace2@{menuSpace2}}
+\index{menuSpace2@{menuSpace2}!menus.h@{menus.h}}
+\doxysubsubsection{\texorpdfstring{menuSpace2()}{menuSpace2()}}
+{\footnotesize\ttfamily \label{menus_8h_a49d3d653bb1cf8bb0b7a1f3685d4cab1} 
+void menu\+Space2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgeral_spaces}{geral\+Spaces}} \texorpdfstring{$\ast$}{*}}]{spaces}{, }\item[{\mbox{\hyperlink{struct_reservation_list}{Reservation\+List}} \texorpdfstring{$\ast$}{*}}]{reservations}{}\end{DoxyParamCaption})}
+
+
+
+This function shows the options to the user choose in menu space(\+Menu Reports). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{structgeral_spaces}{geral\+Spaces}} & and \doxylink{struct_reservation_list}{Reservation\+List} is used to send the adress of the mains variables "{}spaces"{},"{}reservations"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value.\+Its only show the options. 
+\end{DoxyReturn}

@@ -1,0 +1,94 @@
+\doxysection{menu\+Client.\+h}
+\hypertarget{menu_client_8h_source}{}\label{menu_client_8h_source}\mbox{\hyperlink{menu_client_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ File:\ \ \ menuClient.h}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Author:\ Henrique\ Lopes}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ Created\ on\ 20\ de\ dezembro\ de\ 2024,\ 13:52}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ @brief\ In\ this\ header\ file\ we\ will\ declare\ the\ functions\ of\ the\ clients\ to\ use\ in\ other\ pages.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ This\ file\ contains\ the\ functions\ of\ the\ clients\ to\ use\ in\ other\ pages.}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MENUCLIENT\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MENUCLIENT\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Constants}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#define\ MAX\_CLIENT\_NAME\ 100}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ MAX\_CLIENT\_EMAIL\ 50}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#define\ MSG\_ERROR\_EMPTY\_LIST\ "{}The\ client\ list\ is\ empty!"{}}}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00035\ \textcolor{preprocessor}{\#define\ MSG\_ERROR\_CLIENT\_EXISTS\ "{}The\ client\ is\ already\ registered!"{}}}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00040\ \textcolor{preprocessor}{\#define\ MSG\_GET\_CLIENT\_NAME\ "{}Enter\ the\ client's\ name:\ "{}}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#define\ MSG\_GET\_CLIENT\_NIF\ "{}Enter\ the\ client's\ NIF\ (9\ digits):\ "{}}}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \textcolor{preprocessor}{\#define\ MSG\_GET\_CLIENT\_EMAIL\ "{}Enter\ the\ client's\ email:\ "{}}}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00055\ \textcolor{preprocessor}{\#define\ MSG\_GET\_CLIENT\_PHONE\ "{}Enter\ the\ client's\ phone:\ "{}}}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ MSG\_GET\_CLIENT\_ID\ "{}Enter\ the\ client's\ id:\ "{}}}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{comment}{//\ Declaração\ antecipada\ de\ ReservationList}}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{comment}{//\ Structures}}
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_client_a7441ef0865bcb3db9b8064dd7375c1ea}{id}};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{char}\ name[\mbox{\hyperlink{menu_client_8h_a2d12ab6e34cf4e039a4d7ba78fcdc01b}{MAX\_CLIENT\_NAME}}];}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_client_ad68c6985dce5a3d709f854778dedee19}{nif}};}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{char}\ email[\mbox{\hyperlink{menu_client_8h_ad4e16a45dbd96cc15ff74747299115a3}{MAX\_CLIENT\_EMAIL}}];}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_client_ae2e2e8a4ea94dd765699711cba3da163}{phone}};}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_client_a4c11afc03fc3ee49bab660def6558f2a}{day}},\ month,\ year;}
+\DoxyCodeLine{00073\ \ \ \ \ \}\ registration\_date;}
+\DoxyCodeLine{00074\ \}\ \mbox{\hyperlink{struct_client}{Client}};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{struct_client}{Client}}\ *\mbox{\hyperlink{struct_client_list_a32d3845677a8cc6cf87cf4289c1224d0}{clients}};}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_client_list_adbe66a087ac3fd4a5b0566f64ca2d12b}{capacity}};}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_client_list_ac7af894858cf396a219d632f40afdc8d}{total}};}
+\DoxyCodeLine{00080\ \}\ \mbox{\hyperlink{struct_client_list}{ClientList}};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \textcolor{comment}{//\ Funções\ que\ usam\ ReservationList}}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \textcolor{comment}{//Functions}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00092\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a1f39e15ea4205b5b272556b051d4dbce}{saveClients}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00099\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a8e2061f684f52d64b0d5946bc384b4e9}{loadClients}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00106\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a6237f0c3b233e1e2fef8b40e2c086cd5}{reallocClients}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a55e6fcf3bad384b90197a9df67e90c95}{turnOnClient}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{comment}{//\ Function\ Prototypes}}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_aef57236b6217c28e1bc623b10814796e}{initializeClientList}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list,\ \textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a4c4a141a224ee2ae36d484a8c4a12abe}{freeClientList}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00136\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a24ae979eb9be90385244a0c287d40eff}{createClient}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00143\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a6757f5dd07bcd3fecb718bcf092c1540}{listClients}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00151\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_client_8h_a74f33d6757e8d84722d6d5ca6dd8780f}{findClient}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00158\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a52c0a88f12379653ca658e0054979121}{updateClient}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_ad323ca309de2a6289de6527c08d61a60}{removeClient}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00167\ \textcolor{comment}{//\ Reports}}
+\DoxyCodeLine{00173\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_aeda37ddeef101253c22bcd9b6f1bf567}{totalClientsReport}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00180\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_client_8h_a366fed37f3feb5c321c0afbf507efd88}{totalAvailableClients}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list);}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MENUCLIENT\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

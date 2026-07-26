@@ -1,0 +1,115 @@
+\doxysection{menu\+Booking.\+h}
+\hypertarget{menu_booking_8h_source}{}\label{menu_booking_8h_source}\mbox{\hyperlink{menu_booking_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*\ }}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ File:\ \ \ menuBooking.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *\ Author:\ Henrique\ Lopes}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *\ Created\ on\ 20\ de\ dezembro\ de\ 2024,\ 13:54}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *\ @brief\ In\ this\ header\ file\ we\ will\ declare\ the\ functions\ of\ the\ reservations\ to\ use\ in\ other\ pages.}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ This\ file\ contains\ the\ functions\ of\ the\ reservations\ to\ use\ in\ other\ pages.}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ MENUBOOKING\_H}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MENUBOOKING\_H}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{menu_equipment_8h}{menuEquipment.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{menu_space_8h}{menuSpace.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{menu_client_8h}{menuClient.h}}"{}}\ \ \ \ }
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{input_8h}{input.h}}"{}}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ Defines}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#define\ MAX\_RESERVATIONS\ 100}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#define\ MIN\_RESERVATIONS\ 1}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#define\ MSG\_RESERVATION\_ID\ "{}Enter\ the\ reservation\ ID:\ "{}}}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00039\ \textcolor{preprocessor}{\#define\ STATUS\_PENDING\ 1}}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#define\ STATUS\_CONFIRMED\ 2}}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \textcolor{preprocessor}{\#define\ STATUS\_CANCELED\ 3}}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ MSG\_RESERVATION\_STATUS\ "{}Enter\ the\ reservation\ status\ (1.Pending,\ 2.Confirmed,\ 3.Canceled):\ "{}}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \textcolor{comment}{//\ Structures}}
+\DoxyCodeLine{00059\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_date_time_a4c11afc03fc3ee49bab660def6558f2a}{day}},\ month,\ year,\ hour,\ minute;}
+\DoxyCodeLine{00061\ \}\ \mbox{\hyperlink{struct_date_time}{DateTime}};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_ae969188e12b225c180cf4905c0e4040c}{reservation\_id}};}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_a81633369010405f6d037092570b2d7aa}{client\_id}};}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_a3f325680e427c7a0b3d911f8694b3729}{space\_id}};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_a08d8a5ee2c5a8bdd2d6e48cc3ca213ac}{equipment\_id}};}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_ac2025dd138c28a1e08d5cc0dbbd281a1}{equipment\_count}};}
+\DoxyCodeLine{00069\ \ \ \ \ \mbox{\hyperlink{struct_date_time}{DateTime}}\ \mbox{\hyperlink{struct_reservation_a230fe7ba9136a22b732a10a85e65a956}{date}};}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_ae785c25aa0b9333b64146fc3f8965f73}{duration\_hours}};\ \textcolor{comment}{//\ Duration\ of\ the\ reservation\ in\ hours}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_a6e27f49150e9a14580fb313cc2777e00}{status}};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Status\ of\ the\ reservation\ (pending,\ confirmed,\ canceled)}}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_a286acb98a5dbbec3d11cb23b787978e9}{participants}};\ \ \ \textcolor{comment}{//\ Number\ of\ participants}}
+\DoxyCodeLine{00073\ \}\ \mbox{\hyperlink{struct_reservation}{Reservation}};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00077\ \ \ \ \ \mbox{\hyperlink{struct_reservation}{Reservation}}\ *\mbox{\hyperlink{struct_reservation_list_a7fc4ad294aca0557ca94898d4604fd2f}{reservations}};\ \textcolor{comment}{//\ Dynamic\ list\ of\ reservations}}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_list_ac7af894858cf396a219d632f40afdc8d}{total}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Total\ number\ of\ reservations}}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_reservation_list_adbe66a087ac3fd4a5b0566f64ca2d12b}{capacity}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Current\ capacity\ of\ the\ list}}
+\DoxyCodeLine{00080\ \}\ \mbox{\hyperlink{struct_reservation_list}{ReservationList}};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{comment}{//\ CRUD\ Functions}}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00090\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a568b077fe18a772a46046f0e54e5d7dd}{createReservation}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations,\ \mbox{\hyperlink{struct_client_list}{ClientList}}\ *clients,\ \mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces,\ \mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00098\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a46bda51b1cfe0778d7b639d98d0c82a1}{initializeReservationList}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations,\ \textcolor{keywordtype}{int}\ initialCapacity);}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00105\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_ab983b8a996b43882a6e867b0bbdc3e01}{freeReservationList}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00112\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_adebcc6f98e02c3a0a3e0ef733a4c3fd0}{listReservations}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_booking_8h_a8e67d8c534a22db6f85afaab08fc9f09}{searchReservation}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations,\ \textcolor{keywordtype}{int}\ reservation\_id);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00128\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a293065bfd2af143f67761ce90bd687cb}{updateReservation}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations,\ \textcolor{keywordtype}{int}\ reservation\_id);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00136\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a6427e3462072914f9024e821cfbeac88}{deleteReservation}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations,\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces,\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments,\ \textcolor{keywordtype}{int}\ reservation\_id);}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00138\ \textcolor{comment}{//\ Reports}}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a200b78c0ff5a220d5f7f0ec275dc71b5}{totalReservations}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_af83728744b678d2c04ee6afc28f6c139}{listreservationsByStatus}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00159\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_afceb9ccd16bdfcbf37468a5b2c567a2b}{mostParticipantsReservation}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00160\ }
+\DoxyCodeLine{00166\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_adad57fdc78f0483dc29fa8fe8a53e6e1}{leastParticipantsReservation}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ }
+\DoxyCodeLine{00169\ \textcolor{comment}{//Functions}}
+\DoxyCodeLine{00175\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a0d9f8bdb1c5ede2aa792024ce9bac871}{turnOnBooking}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_ab326529bf65b020252dad2c19e54b810}{saveReservations}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_aac49211dbf153a633804d1b0c093dae3}{loadReservations}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \textcolor{comment}{//secondary\ functions}}
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a49abe241d7d2bbce8df045710f529f63}{reservationsByStatus}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00204\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a7a9f006356be0c024004d01daf6ac936}{mostActiveClient}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *list,\ \mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00205\ }
+\DoxyCodeLine{00212\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{menu_booking_8h_a4f539b1ce4787290f4e59e17f5dc8704}{findSpace}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces,\ \textcolor{keywordtype}{int}\ space\_id);}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00219\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a6de443b3ba2c581a437a9bcc4f7eb82c}{leastReservationsClient}}(\mbox{\hyperlink{struct_client_list}{ClientList}}\ *clients,\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00226\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a1dc537f359b38da646c10c78a1c7d786}{mostSpaceReservated}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces,\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00227\ }
+\DoxyCodeLine{00233\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_a7bf3f1203d455a22e55d54cc3b1d48fe}{leastSpaceReservated}}(\mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces,\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations);}
+\DoxyCodeLine{00234\ }
+\DoxyCodeLine{00241\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_booking_8h_ad995400e35b7447b6de0cfc2c3ea7cd7}{cancelReservation}}(\mbox{\hyperlink{struct_reservation_list}{ReservationList}}\ *reservations,\ \mbox{\hyperlink{structgeral_spaces}{geralSpaces}}\ *spaces,\mbox{\hyperlink{structequipment_manager}{equipmentManager}}\ *equipments,\ \textcolor{keywordtype}{int}\ reservation\_id);}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00243\ \textcolor{preprocessor}{\#endif}\textcolor{comment}{/*\ MENUBOOKING\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,11 @@
+var searchData=
+[
+  ['saveclients_0',['saveClients',['../menu_client_8c.html#a1f39e15ea4205b5b272556b051d4dbce',1,'saveClients(ClientList *list):&#160;menuClient.c'],['../menu_client_8h.html#a1f39e15ea4205b5b272556b051d4dbce',1,'saveClients(ClientList *list):&#160;menuClient.c']]],
+  ['saveequipment_1',['saveEquipment',['../menu_equipment_8c.html#a887d7fecd6756fd2a62fe72c6d298dc1',1,'saveEquipment(equipmentManager *equipments):&#160;menuEquipment.c'],['../menu_equipment_8h.html#a887d7fecd6756fd2a62fe72c6d298dc1',1,'saveEquipment(equipmentManager *equipments):&#160;menuEquipment.c']]],
+  ['savereservations_2',['saveReservations',['../menu_booking_8c.html#a3a732155d5349911e4de3bd2afe704b0',1,'saveReservations(ReservationList *list):&#160;menuBooking.c'],['../menu_booking_8h.html#ab326529bf65b020252dad2c19e54b810',1,'saveReservations(ReservationList *reservations):&#160;menuBooking.c']]],
+  ['savespace_3',['saveSpace',['../menu_space_8c.html#aa3f4050abc92e76720ef1d33994e6455',1,'saveSpace(geralSpaces *spaces):&#160;menuSpace.c'],['../menu_space_8h.html#aa3f4050abc92e76720ef1d33994e6455',1,'saveSpace(geralSpaces *spaces):&#160;menuSpace.c']]],
+  ['searchreservation_4',['searchReservation',['../menu_booking_8c.html#adeb24efe656fa13fd1ca5f8ccbf4d0a2',1,'searchReservation(ReservationList *list, int reservation_id):&#160;menuBooking.c'],['../menu_booking_8h.html#a8e67d8c534a22db6f85afaab08fc9f09',1,'searchReservation(ReservationList *reservations, int reservation_id):&#160;menuBooking.c']]],
+  ['spaceoccupied_5',['spaceOccupied',['../menu_space_8c.html#ac1e7fe29bc3e5030ed759881a480a143',1,'spaceOccupied(geralSpaces *spaces, int space_id):&#160;menuSpace.c'],['../menu_space_8h.html#ac1e7fe29bc3e5030ed759881a480a143',1,'spaceOccupied(geralSpaces *spaces, int space_id):&#160;menuSpace.c']]],
+  ['spacesbytype_6',['spacesByType',['../menu_space_8c.html#a6270abf672910ea81d95acc70a916193',1,'spacesByType(geralSpaces *spaces):&#160;menuSpace.c'],['../menu_space_8h.html#a6270abf672910ea81d95acc70a916193',1,'spacesByType(geralSpaces *spaces):&#160;menuSpace.c']]],
+  ['statusofequipment_7',['statusOfEquipment',['../menu_equipment_8c.html#a900ce377ef51c7244cd31cde6dd78ed0',1,'menuEquipment.c']]]
+];

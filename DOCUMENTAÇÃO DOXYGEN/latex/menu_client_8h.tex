@@ -1,0 +1,356 @@
+\doxysection{menu\+Client.\+h File Reference}
+\hypertarget{menu_client_8h}{}\label{menu_client_8h}\index{menuClient.h@{menuClient.h}}
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_client}{Client}}
+\item 
+struct \mbox{\hyperlink{struct_client_list}{Client\+List}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_a2d12ab6e34cf4e039a4d7ba78fcdc01b}{MAX\+\_\+\+CLIENT\+\_\+\+NAME}}~100
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_ad4e16a45dbd96cc15ff74747299115a3}{MAX\+\_\+\+CLIENT\+\_\+\+EMAIL}}~50
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_a574a11b67ff03835d3f3ee2eb2dd2acb}{MSG\+\_\+\+ERROR\+\_\+\+EMPTY\+\_\+\+LIST}}~"{}The client list is empty!"{}
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_a4f29b401ea71f61a9e2232c11e1aeb3c}{MSG\+\_\+\+ERROR\+\_\+\+CLIENT\+\_\+\+EXISTS}}~"{}The client is already registered!"{}
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_ac4867b5f2a71a894aaa9c88363dffcb6}{MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+NAME}}~"{}Enter the client\textquotesingle{}s name\+: "{}
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_ae54fa4ac7a55caefcd0a53581ca3767f}{MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+NIF}}~"{}Enter the client\textquotesingle{}s NIF (9 digits)\+: "{}
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_a765f4864b21ce172a84ccd2326aa6ace}{MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+EMAIL}}~"{}Enter the client\textquotesingle{}s email\+: "{}
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_a2a27fd23d9b3ee3b94b3cf166397adc2}{MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+PHONE}}~"{}Enter the client\textquotesingle{}s phone\+: "{}
+\item 
+\#define \mbox{\hyperlink{menu_client_8h_a27b33075c84ff422118279a5b3da7295}{MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+ID}}~"{}Enter the client\textquotesingle{}s id\+: "{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_client_8h_a1f39e15ea4205b5b272556b051d4dbce}{save\+Clients}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function saves the record in clients, for example Create, List, Update and Remove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_a8e2061f684f52d64b0d5946bc384b4e9}{load\+Clients}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function load the record in clients, for example Create, List, Update and Remove. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_a6237f0c3b233e1e2fef8b40e2c086cd5}{realloc\+Clients}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function realloc the clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_a55e6fcf3bad384b90197a9df67e90c95}{turn\+On\+Client}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function initializes the clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_aef57236b6217c28e1bc623b10814796e}{initialize\+Client\+List}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list, int capacity)
+\begin{DoxyCompactList}\small\item\em This function initializes the clients List. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_a4c4a141a224ee2ae36d484a8c4a12abe}{free\+Client\+List}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function free the clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_a24ae979eb9be90385244a0c287d40eff}{create\+Client}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function create the clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_a6757f5dd07bcd3fecb718bcf092c1540}{list\+Clients}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function list the clients. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{menu_client_8h_a74f33d6757e8d84722d6d5ca6dd8780f}{find\+Client}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list, int id)
+\begin{DoxyCompactList}\small\item\em This function find the clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_a52c0a88f12379653ca658e0054979121}{update\+Client}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function update the clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_ad323ca309de2a6289de6527c08d61a60}{remove\+Client}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function delete the clients. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_aeda37ddeef101253c22bcd9b6f1bf567}{total\+Clients\+Report}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function show the total clients reports. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_client_8h_a366fed37f3feb5c321c0afbf507efd88}{total\+Available\+Clients}} (\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}list)
+\begin{DoxyCompactList}\small\item\em This function show the total available clients. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{menu_client_8h_ad4e16a45dbd96cc15ff74747299115a3}\index{menuClient.h@{menuClient.h}!MAX\_CLIENT\_EMAIL@{MAX\_CLIENT\_EMAIL}}
+\index{MAX\_CLIENT\_EMAIL@{MAX\_CLIENT\_EMAIL}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_CLIENT\_EMAIL}{MAX\_CLIENT\_EMAIL}}
+{\footnotesize\ttfamily \label{menu_client_8h_ad4e16a45dbd96cc15ff74747299115a3} 
+\#define MAX\+\_\+\+CLIENT\+\_\+\+EMAIL~50}
+
+Maximum length for a client\textquotesingle{}s email. \Hypertarget{menu_client_8h_a2d12ab6e34cf4e039a4d7ba78fcdc01b}\index{menuClient.h@{menuClient.h}!MAX\_CLIENT\_NAME@{MAX\_CLIENT\_NAME}}
+\index{MAX\_CLIENT\_NAME@{MAX\_CLIENT\_NAME}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_CLIENT\_NAME}{MAX\_CLIENT\_NAME}}
+{\footnotesize\ttfamily \label{menu_client_8h_a2d12ab6e34cf4e039a4d7ba78fcdc01b} 
+\#define MAX\+\_\+\+CLIENT\+\_\+\+NAME~100}
+
+Maximum length for a client\textquotesingle{}s name. \Hypertarget{menu_client_8h_a4f29b401ea71f61a9e2232c11e1aeb3c}\index{menuClient.h@{menuClient.h}!MSG\_ERROR\_CLIENT\_EXISTS@{MSG\_ERROR\_CLIENT\_EXISTS}}
+\index{MSG\_ERROR\_CLIENT\_EXISTS@{MSG\_ERROR\_CLIENT\_EXISTS}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_ERROR\_CLIENT\_EXISTS}{MSG\_ERROR\_CLIENT\_EXISTS}}
+{\footnotesize\ttfamily \label{menu_client_8h_a4f29b401ea71f61a9e2232c11e1aeb3c} 
+\#define MSG\+\_\+\+ERROR\+\_\+\+CLIENT\+\_\+\+EXISTS~"{}The client is already registered!"{}}
+
+Error message when the client is already registered. \Hypertarget{menu_client_8h_a574a11b67ff03835d3f3ee2eb2dd2acb}\index{menuClient.h@{menuClient.h}!MSG\_ERROR\_EMPTY\_LIST@{MSG\_ERROR\_EMPTY\_LIST}}
+\index{MSG\_ERROR\_EMPTY\_LIST@{MSG\_ERROR\_EMPTY\_LIST}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_ERROR\_EMPTY\_LIST}{MSG\_ERROR\_EMPTY\_LIST}}
+{\footnotesize\ttfamily \label{menu_client_8h_a574a11b67ff03835d3f3ee2eb2dd2acb} 
+\#define MSG\+\_\+\+ERROR\+\_\+\+EMPTY\+\_\+\+LIST~"{}The client list is empty!"{}}
+
+Error message when the client list is empty. \Hypertarget{menu_client_8h_a765f4864b21ce172a84ccd2326aa6ace}\index{menuClient.h@{menuClient.h}!MSG\_GET\_CLIENT\_EMAIL@{MSG\_GET\_CLIENT\_EMAIL}}
+\index{MSG\_GET\_CLIENT\_EMAIL@{MSG\_GET\_CLIENT\_EMAIL}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_GET\_CLIENT\_EMAIL}{MSG\_GET\_CLIENT\_EMAIL}}
+{\footnotesize\ttfamily \label{menu_client_8h_a765f4864b21ce172a84ccd2326aa6ace} 
+\#define MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+EMAIL~"{}Enter the client\textquotesingle{}s email\+: "{}}
+
+Prompt message for entering the client\textquotesingle{}s email. \Hypertarget{menu_client_8h_a27b33075c84ff422118279a5b3da7295}\index{menuClient.h@{menuClient.h}!MSG\_GET\_CLIENT\_ID@{MSG\_GET\_CLIENT\_ID}}
+\index{MSG\_GET\_CLIENT\_ID@{MSG\_GET\_CLIENT\_ID}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_GET\_CLIENT\_ID}{MSG\_GET\_CLIENT\_ID}}
+{\footnotesize\ttfamily \label{menu_client_8h_a27b33075c84ff422118279a5b3da7295} 
+\#define MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+ID~"{}Enter the client\textquotesingle{}s id\+: "{}}
+
+Prompt message for entering the client\textquotesingle{}s ID. \Hypertarget{menu_client_8h_ac4867b5f2a71a894aaa9c88363dffcb6}\index{menuClient.h@{menuClient.h}!MSG\_GET\_CLIENT\_NAME@{MSG\_GET\_CLIENT\_NAME}}
+\index{MSG\_GET\_CLIENT\_NAME@{MSG\_GET\_CLIENT\_NAME}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_GET\_CLIENT\_NAME}{MSG\_GET\_CLIENT\_NAME}}
+{\footnotesize\ttfamily \label{menu_client_8h_ac4867b5f2a71a894aaa9c88363dffcb6} 
+\#define MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+NAME~"{}Enter the client\textquotesingle{}s name\+: "{}}
+
+Prompt message for entering the client\textquotesingle{}s name. \Hypertarget{menu_client_8h_ae54fa4ac7a55caefcd0a53581ca3767f}\index{menuClient.h@{menuClient.h}!MSG\_GET\_CLIENT\_NIF@{MSG\_GET\_CLIENT\_NIF}}
+\index{MSG\_GET\_CLIENT\_NIF@{MSG\_GET\_CLIENT\_NIF}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_GET\_CLIENT\_NIF}{MSG\_GET\_CLIENT\_NIF}}
+{\footnotesize\ttfamily \label{menu_client_8h_ae54fa4ac7a55caefcd0a53581ca3767f} 
+\#define MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+NIF~"{}Enter the client\textquotesingle{}s NIF (9 digits)\+: "{}}
+
+Prompt message for entering the client\textquotesingle{}s NIF (9 digits). \Hypertarget{menu_client_8h_a2a27fd23d9b3ee3b94b3cf166397adc2}\index{menuClient.h@{menuClient.h}!MSG\_GET\_CLIENT\_PHONE@{MSG\_GET\_CLIENT\_PHONE}}
+\index{MSG\_GET\_CLIENT\_PHONE@{MSG\_GET\_CLIENT\_PHONE}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{MSG\_GET\_CLIENT\_PHONE}{MSG\_GET\_CLIENT\_PHONE}}
+{\footnotesize\ttfamily \label{menu_client_8h_a2a27fd23d9b3ee3b94b3cf166397adc2} 
+\#define MSG\+\_\+\+GET\+\_\+\+CLIENT\+\_\+\+PHONE~"{}Enter the client\textquotesingle{}s phone\+: "{}}
+
+Prompt message for entering the client\textquotesingle{}s phone. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_client_8h_a24ae979eb9be90385244a0c287d40eff}\index{menuClient.h@{menuClient.h}!createClient@{createClient}}
+\index{createClient@{createClient}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{createClient()}{createClient()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a24ae979eb9be90385244a0c287d40eff} 
+void create\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function create the clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just create the clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a74f33d6757e8d84722d6d5ca6dd8780f}\index{menuClient.h@{menuClient.h}!findClient@{findClient}}
+\index{findClient@{findClient}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{findClient()}{findClient()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a74f33d6757e8d84722d6d5ca6dd8780f} 
+int find\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+This function find the clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+{\em id} & is used to find the id of the client. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does return 1 if client is found or -\/1 if client is not found. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a4c4a141a224ee2ae36d484a8c4a12abe}\index{menuClient.h@{menuClient.h}!freeClientList@{freeClientList}}
+\index{freeClientList@{freeClientList}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{freeClientList()}{freeClientList()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a4c4a141a224ee2ae36d484a8c4a12abe} 
+void free\+Client\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function free the clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just free the clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_aef57236b6217c28e1bc623b10814796e}\index{menuClient.h@{menuClient.h}!initializeClientList@{initializeClientList}}
+\index{initializeClientList@{initializeClientList}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{initializeClientList()}{initializeClientList()}}
+{\footnotesize\ttfamily \label{menu_client_8h_aef57236b6217c28e1bc623b10814796e} 
+void initialize\+Client\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+This function initializes the clients List. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just inicialize the clients list. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a6757f5dd07bcd3fecb718bcf092c1540}\index{menuClient.h@{menuClient.h}!listClients@{listClients}}
+\index{listClients@{listClients}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{listClients()}{listClients()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a6757f5dd07bcd3fecb718bcf092c1540} 
+void list\+Clients (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function list the clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just list the clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a8e2061f684f52d64b0d5946bc384b4e9}\index{menuClient.h@{menuClient.h}!loadClients@{loadClients}}
+\index{loadClients@{loadClients}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{loadClients()}{loadClients()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a8e2061f684f52d64b0d5946bc384b4e9} 
+void load\+Clients (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function load the record in clients, for example Create, List, Update and Remove. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Its only load the clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a6237f0c3b233e1e2fef8b40e2c086cd5}\index{menuClient.h@{menuClient.h}!reallocClients@{reallocClients}}
+\index{reallocClients@{reallocClients}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{reallocClients()}{reallocClients()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a6237f0c3b233e1e2fef8b40e2c086cd5} 
+void realloc\+Clients (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function realloc the clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just Realloc the clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_ad323ca309de2a6289de6527c08d61a60}\index{menuClient.h@{menuClient.h}!removeClient@{removeClient}}
+\index{removeClient@{removeClient}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{removeClient()}{removeClient()}}
+{\footnotesize\ttfamily \label{menu_client_8h_ad323ca309de2a6289de6527c08d61a60} 
+void remove\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function delete the clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just delete the clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a1f39e15ea4205b5b272556b051d4dbce}\index{menuClient.h@{menuClient.h}!saveClients@{saveClients}}
+\index{saveClients@{saveClients}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{saveClients()}{saveClients()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a1f39e15ea4205b5b272556b051d4dbce} 
+void save\+Clients (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function saves the record in clients, for example Create, List, Update and Remove. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Its only save the clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a366fed37f3feb5c321c0afbf507efd88}\index{menuClient.h@{menuClient.h}!totalAvailableClients@{totalAvailableClients}}
+\index{totalAvailableClients@{totalAvailableClients}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{totalAvailableClients()}{totalAvailableClients()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a366fed37f3feb5c321c0afbf507efd88} 
+void total\+Available\+Clients (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function show the total available clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the total available clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_aeda37ddeef101253c22bcd9b6f1bf567}\index{menuClient.h@{menuClient.h}!totalClientsReport@{totalClientsReport}}
+\index{totalClientsReport@{totalClientsReport}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{totalClientsReport()}{totalClientsReport()}}
+{\footnotesize\ttfamily \label{menu_client_8h_aeda37ddeef101253c22bcd9b6f1bf567} 
+void total\+Clients\+Report (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function show the total clients reports. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just show the total clients reports. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a55e6fcf3bad384b90197a9df67e90c95}\index{menuClient.h@{menuClient.h}!turnOnClient@{turnOnClient}}
+\index{turnOnClient@{turnOnClient}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{turnOnClient()}{turnOnClient()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a55e6fcf3bad384b90197a9df67e90c95} 
+void turn\+On\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function initializes the clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just inicialize the clients. 
+\end{DoxyReturn}
+\Hypertarget{menu_client_8h_a52c0a88f12379653ca658e0054979121}\index{menuClient.h@{menuClient.h}!updateClient@{updateClient}}
+\index{updateClient@{updateClient}!menuClient.h@{menuClient.h}}
+\doxysubsubsection{\texorpdfstring{updateClient()}{updateClient()}}
+{\footnotesize\ttfamily \label{menu_client_8h_a52c0a88f12379653ca658e0054979121} 
+void update\+Client (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_client_list}{Client\+List}} \texorpdfstring{$\ast$}{*}}]{list}{}\end{DoxyParamCaption})}
+
+
+
+This function update the clients. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \doxylink{struct_client_list}{Client\+List}} & are used to send the adress of the mains variables "{}list"{} to the following functions. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+This function does not return any value. Just update the clients. 
+\end{DoxyReturn}
